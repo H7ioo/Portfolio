@@ -1,0 +1,92 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="https://cdn-icons.flaticon.com/png/512/2936/premium/2936728.png?token=exp=1658846190~hmac=36012d9e6a18eba744e602051309083c"
+            type="image/x-icon"
+        />
+        <title>Message Generator</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="./css/all.min.css" />
+        <!-- Normalize -->
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="./css/main.css" />
+        <!-- Google Font -->
+        <!-- Jquery -->
+        <script src="./js/jquery.min.js" defer></script>
+        <!-- Js -->
+        <script src="./js/index.js" defer></script>
+    </head>
+    <body>
+        <!-- # Start Emojis -->
+        <div class="emojis-container">
+            <div class="inputs-container">
+                <div class="input-section">
+                    <div class="adding-section">
+                        <input type="text" placeholder="Main Word" />
+                    </div>
+                    <div class="items">
+                        <div>
+                            <input
+                                type="text"
+                                class="search"
+                                placeholder="Search"
+                            />
+                        </div>
+                        <ol class="mainWords"></ol>
+                    </div>
+                </div>
+                <div class="input-section shuffle-secondaryWords">
+                    <div class="adding-section">
+                        <input type="text" placeholder="Secondary Word" />
+                    </div>
+                    <div class="items">
+                        <div>
+                            <input
+                                type="text"
+                                class="search"
+                                placeholder="Search"
+                            />
+                        </div>
+                        <ol class="secondaryWords"></ol>
+                    </div>
+                    <div class="buttons">
+                        <button class="shuffle">shuffle</button>
+                    </div>
+                </div>
+                <div class="input-section shuffle-emojis">
+                    <div class="adding-section">
+                        <input type="text" placeholder="Emoji" />
+                    </div>
+                    <div class="items">
+                        <div>
+                            <input
+                                type="text"
+                                class="search"
+                                placeholder="Search"
+                            />
+                        </div>
+                        <ol class="emojis"></ol>
+                    </div>
+                    <div class="buttons">
+                        <button class="shuffle">shuffle</button>
+                        <!-- ? Add min-max and default value of 3-->
+                        <input min="0" value="3" type="number" class="length" />
+                    </div>
+                </div>
+            </div>
+            <div class="result-container">
+                <input type="text" readonly="readonly" class="result" />
+                <div>
+                    <button class="submit">Submit</button>
+                    <button class="copy">Copy</button>
+                </div>
+            </div>
+        </div>
+        <!-- # End Emojis -->
+    </body>
+</html>

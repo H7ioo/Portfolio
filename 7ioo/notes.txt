@@ -1,0 +1,2 @@
+- Icon for all files
+- Translations

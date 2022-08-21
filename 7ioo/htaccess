@@ -1,0 +1,11 @@
+
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ---- Render pages without urls
+Options +MultiViews
+# --- Page 404
+ErrorDocument 404 http://www.7ioo.site/home.html
+# --- Hide directory
+Options -Indexes

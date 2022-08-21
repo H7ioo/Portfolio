@@ -1,0 +1,19 @@
+/* # Start Header */
+.header nav a.nav-link:not(.dropdown-toggle)::after {
+  left: auto;
+  right: 0;
+}
+/* # End Header */
+/* @ Page About */
+/* # Start About */
+.accordion .accordion-item .accordion-body > ul > li::before {
+  content: "";
+}
+.accordion .accordion-item .accordion-body > ul > li::after {
+  content: "\f177";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: 10px;
+  color: var(--light-red);
+}
+/* # End About */

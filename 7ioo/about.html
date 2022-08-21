@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="head-title-about">About | Omar Jano</title>
+    <!-- Icon -->
+    <link rel="icon" href="#" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/utilities/styles/normalize.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/utilities/styles/bootstrap.min.css" />
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/utilities/styles/all.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/utilities/styles/main.css" />
+    <!-- Main-RTL CSS -->
+    <link class="rtl-stylesheet" rel="stylesheet" href="" />
+    <!-- jQuery JS -->
+    <script src="/utilities/scripts/jquery.min.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="/utilities/scripts/bootstrap.bundle.min.js" defer></script>
+    <!-- Font Awesome JS-->
+    <script src="/utilities/scripts/all.min.js" defer></script>
+    <!-- Main JS -->
+    <script src="/utilities/scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- # Start Header -->
+    <header id="#header" class="header pt-2 pb-2 position-absolute w-100">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <div class="navbar-brand d-lg-none">Omar Jano</div>
+            <button
+              class="navbar-toggler ms-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-menu"
+              aria-controls="navbar-menu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+              <ul
+                data-dir
+                class="navbar-nav me-auto mb-2 mb-lg-0 d-flex w-100 justify-content-between align-items-center text-center"
+              >
+                <div
+                  class="d-flex flex-column flex-lg-row gap-3 mb-3 mb-lg-0 text-capitalize"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="/home.html"
+                      data-translate="header-home"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="/blogs.html"
+                      data-translate="header-blogs"
+                      >Blogs</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      href="#"
+                      data-translate="header-aboutMe"
+                      >About Me</a
+                    >
+                  </li>
+                </div>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-translate="header-languages"
+                  >
+                    Language: EN</a
+                  >
+                  <ul class="dropdown-menu text-center">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-set-language="en"
+                        data-translate="header-languageEN"
+                        >English</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-set-language="tr"
+                        data-translate="header-languageTR"
+                        >Turkish</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-set-language="ar"
+                        data-translate="header-languageAR"
+                        >Arabic</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- # End Header -->
+    <!-- # Start About -->
+    <section class="about" id="about">
+      <div class="container text-light">
+        <div class="text text-center pb-3">
+          <h1
+            class="text-center fw-bolder text-capitalize"
+            data-translate="about-about-mainTitle"
+          >
+            About Me
+          </h1>
+          <p class="m-0 mb-1">
+            <translate data-translate="about-about-aboutMe-paragraph_1-part_1"
+              >My name is Omar Jano. My birthdate is 27.4.2006.</translate
+            >
+            <br />
+            <translate data-translate="about-about-aboutMe-paragraph_1-part_2">
+              I'm Syrian living in Turkey. I speak 3 languages in the meantime,
+              English, Turkish and Arabic.
+            </translate>
+          </p>
+          <p class="m-0 mb-1">
+            <translate data-translate="about-about-aboutMe-paragraph_2-part_1"
+              >I'm learning programming so I can work as a programmer. I'm on
+              the Full-Stack roadmap.</translate
+            >
+            <br />
+            <translate data-translate="about-about-aboutMe-paragraph_2-part_2"
+              >My goal is to be a professional Full-Stack developer.</translate
+            >
+          </p>
+          <p class="m-0" data-translate="about-about-aboutMe-paragraph_3">
+            I work as a real estate agent and a translator (I'm new to it).
+          </p>
+        </div>
+        <div class="questions text-center pb-3 pt-3">
+          <h1
+            class="text-center fw-bolder text-capitalize"
+            data-translate="about-about-questions-mainTitle"
+          >
+            Questions
+          </h1>
+          <p class="m-0 mb-1">
+            <translate data-translate="about-about-questions-question_1-part_1">
+              Q: When did you start coding?
+            </translate>
+            <br />
+            <translate data-translate="about-about-questions-question_1-part_2">
+              A: As I remember, I started learning in 2017. I didn't take it
+              seriously as I do now.
+            </translate>
+          </p>
+          <p class="m-0 mb-1">
+            <translate data-translate="about-about-questions-question_2-part_1">
+              Q: Where are you at the roadmap?
+            </translate>
+            <br />
+            <translate data-translate="about-about-questions-question_2-part_2">
+              A: You can check the references for the roadmap link.
+            </translate>
+          </p>
+          <p class="m-0 mb-1">
+            <translate data-translate="about-about-questions-question_3-part_1"
+              >Q: What resources did you use for learning
+              programming?</translate
+            >
+            <br />
+            <translate data-translate="about-about-questions-question_3-part_2"
+              >A: I used all kinds of resources, but the most rely was on Elzero
+              Web School.</translate
+            >
+          </p>
+          <p class="m-0">
+            <translate data-translate="about-about-questions-question_4-part_1">
+              Q: Do you work as a programmer?
+            </translate>
+            <br />
+            <translate data-translate="about-about-questions-question_4-part_2">
+              A: No, I don't. When I finish React.js I'll start working as a
+              freelancer.
+            </translate>
+          </p>
+        </div>
+        <div class="others text-center pt-3">
+          <h1
+            class="text-center fw-bolder text-capitalize"
+            data-translate="about-about-others-mainTitle"
+          >
+            Others
+          </h1>
+          <div class="accordion" id="othersAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button fw-bolder d-block text-center fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  data-translate="about-about-others-accordion-references-mainTitle"
+                >
+                  References
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#othersAccordion"
+              >
+                <div class="accordion-body">
+                  <ul
+                    data-dir
+                    class="position-relative d-flex flex-column gap-1"
+                  >
+                    <li>
+                      <a
+                        href="https://omarjanoh7ioo.notion.site/Programming-RoadMap-b9a2d2b5ead042d3943e5032bdb99bf0"
+                        class="text-capitalize text-dark"
+                        target="_blank"
+                        data-translate="about-about-others-accordion-references-roadMap"
+                        >RoadMap</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://omarjanoh7ioo.notion.site/Watching-List-aa79c5ab213b4d71aaf0fb7b64b2fb4e"
+                        class="text-capitalize text-dark"
+                        target="_blank"
+                        data-translate="about-about-others-accordion-references-watchingList"
+                        >Watching List</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://omarjanoh7ioo.notion.site/1de60f18605144a5810c054239945478?v=69af8c6a262e48c696a09c23fe874ccc"
+                        class="text-capitalize text-dark"
+                        target="_blank"
+                        data-translate="about-about-others-accordion-references-bookshelf"
+                        >Bookshelf</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://omarjanoh7ioo.notion.site/Training-Program-e6751b2522894d5485680a3bb01b02ec"
+                        class="text-capitalize text-dark"
+                        target="_blank"
+                        data-translate="about-about-others-accordion-references-trainingProgram"
+                        >Training program</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button fw-bolder d-block text-center fs-5 collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                  data-translate="about-about-others-accordion-portfolio-mainTitle"
+                >
+                  Portfolio
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#othersAccordion"
+              >
+                <div class="accordion-body">
+                  <ul
+                    data-dir
+                    class="position-relative d-flex flex-column gap-1"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="text-capitalize text-dark"
+                        target="_blank"
+                        data-translate="about-about-others-accordion-portfolio-recipesWebsite"
+                        >Recipes website</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-capitalize text-dark"
+                        target="_blank"
+                        data-translate="about-about-others-accordion-portfolio-geographyGame"
+                        >Geography game</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button fw-bolder d-block text-center fs-5 collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                  data-translate="about-about-others-accordion-hobbies-mainTitle"
+                >
+                  Hobbies
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#othersAccordion"
+              >
+                <div class="accordion-body">
+                  <ul
+                    data-dir
+                    class="position-relative d-flex flex-column gap-1"
+                  >
+                    <translate
+                      data-translate="about-about-others-accordion-hobbies-description"
+                      >I have a lot of hobbies, but those are the main
+                      ones:</translate
+                    >
+                    <li
+                      class="text-capitalize"
+                      data-translate="about-about-others-accordion-hobbies-programming"
+                    >
+                      Programming
+                    </li>
+                    <!-- prettier-ignore -->
+                    <li class="text-capitalize" data-translate="about-about-others-accordion-hobbies-learning">Learning and trying new things</li>
+                    <li
+                      class="text-capitalize"
+                      data-translate="about-about-others-accordion-hobbies-watching"
+                    >
+                      Watching anime
+                    </li>
+                    <li
+                      class="text-capitalize"
+                      data-translate="about-about-others-accordion-hobbies-listening"
+                    >
+                      Listening to music
+                    </li>
+                    <li
+                      class="text-capitalize"
+                      data-translate="about-about-others-accordion-hobbies-weight"
+                    >
+                      Weight lifting
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button fw-bolder d-block text-center fs-5 collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Goals
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#othersAccordion"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- # End About -->
+    <!-- # Start Footer -->
+    <footer id="footer" class="footer py-4">
+      <div class="container">
+        <ul
+          class="d-flex justify-content-center gap-3 gap-sm-4 gap-md-5 gap-lg-5 fs-4 text-light mb-4"
+        >
+          <li>
+            <a
+              class="ig"
+              href="https://www.instagram.com/omar_7ioo/"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="fac"
+              href="https://www.facebook.com/omar.jano.52/"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a class="twit" href="https://twitter.com/omar_7ioo" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a class="git" href="https://github.com/H7ioo" target="_blank">
+              <i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+        </ul>
+        <p
+          data-dir
+          class="d-flex justify-content-center text-capitalize text-light mb-0"
+        >
+          <translate data-translate="footer-paragraph_1-part_1"
+            >Made with</translate
+          >
+          <span class="mx-1"><i class="fa-solid fa-heart"></i></span>
+          <translate data-translate="footer-paragraph_1-part_2"
+            >by Omar Jano</translate
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- # End Footer -->
+  </body>
+</html>
