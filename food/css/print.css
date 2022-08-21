@@ -1,0 +1,336 @@
+@media print {
+    .recipe {
+        display: none;
+    }
+    .recipe .divider {
+        margin: 30px 0 30px 20px;
+        position: relative;
+        background-color: black;
+    }
+    .recipe .divider::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -20px;
+        height: 6px;
+        width: 6px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: var(--main-color);
+    }
+    .recipe .recipe-info {
+        display: flex;
+    }
+    @media (max-width: 767px) {
+        .recipe .recipe-info {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .recipe .recipe-info .text {
+        width: 100%;
+    }
+    .recipe .recipe-info .text h1 {
+        font-weight: 900;
+        position: relative;
+        width: fit-content;
+        padding: 10px;
+        border-radius: var(--low-border-radius);
+        overflow: hidden;
+        transition: var(--fast-transition);
+    }
+    .recipe .recipe-info .text h1 {
+        text-transform: capitalize;
+    }
+    .recipe .recipe-info .text h1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        z-index: -1;
+        transition: var(--fast-transition);
+    }
+    .recipe .recipe-info .text h1:hover {
+        color: var(--light-text-color);
+    }
+    .recipe .recipe-info .text h1:hover::before {
+        left: 0;
+    }
+    .recipe .recipe-info .text .image-container {
+        display: flex;
+        justify-content: center;
+    }
+    .recipe .recipe-info .text .image-container .image {
+        width: 500px;
+        height: 500px;
+        border-radius: var(--high-border-radius);
+        border: 2px solid var(--dark-border-color);
+        overflow: hidden;
+    }
+    .recipe .recipe-info .text .image-container .image img {
+        max-width: 100%;
+        position: relative;
+        top: -85px;
+    }
+    @media (max-width: 767px) {
+        .recipe .recipe-info .text .image-container .image {
+            width: 400px;
+            height: 400px;
+        }
+        .recipe .recipe-info .text .image-container .image img {
+            width: 400px;
+            height: 400px;
+            top: 0;
+            object-fit: cover;
+        }
+    }
+    .recipe .recipe-info .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+    }
+    @media (max-width: 767px) {
+        .recipe .recipe-info .buttons {
+            flex-direction: row;
+        }
+    }
+    .recipe .recipe-info .buttons button {
+        padding: 20px 10px;
+        border: none;
+        background-color: var(--main-color);
+        color: var(--light-text-color);
+        border-radius: var(--low-border-radius);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    @media (max-width: 767px) {
+        .recipe .recipe-info .buttons button {
+            flex-direction: column;
+            padding: 10px;
+            width: 100%;
+        }
+    }
+    .recipe .recipe-info .buttons button i {
+        font-size: 1.1rem;
+    }
+    .recipe .recipe-info .buttons button:hover {
+        filter: brightness(var(--high-brightness));
+    }
+    .recipe .preparing .ingredients h2,
+    .recipe .preparing .directions h2,
+    .recipe .preparing .notes h2 {
+        margin-bottom: 30px;
+    }
+    .recipe .preparing .ingredients ul,
+    .recipe .preparing .directions ul,
+    .recipe .preparing .notes ol {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .recipe .preparing .directions ul {
+        gap: 30px;
+    }
+    .recipe .preparing .ingredients ul li,
+    .recipe .preparing .directions ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        /* align-items: center; */
+    }
+    .recipe .preparing .ingredients ul li input[class="ingredient-checkbox"],
+    .recipe .preparing .directions ul li input[class="step-checkbox"] {
+        opacity: 0;
+        position: absolute;
+        cursor: pointer;
+        left: -9999px;
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]
+        + label,
+    .recipe .preparing .directions ul li input[class="step-checkbox"] + label {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]
+        + label::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(0, 0, 0, 0.75);
+        border-radius: var(--low-border-radius);
+        margin-right: 10px;
+        transition: var(--fast-transition);
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]:focus-visible
+        + label::before,
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]:focus-visible
+        + label::before {
+        box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]
+        + label:hover::before,
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]
+        + label:hover::before {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]
+        + label::after {
+        content: "\002B";
+        position: absolute;
+        font-weight: 500;
+        font-size: 15px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(180deg) scale(0);
+        transition: var(--fast-transition);
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]:checked
+        + label::after {
+        transform: rotate(0deg) scale(1);
+        color: white;
+    }
+    .recipe
+        .preparing
+        .ingredients
+        ul
+        li
+        input[class="ingredient-checkbox"]:checked
+        + label::before {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+    }
+    .recipe .preparing .ingredients button.add-to-cart i,
+    .recipe .preparing .directions button.tag-us i {
+        margin-right: 5px;
+    }
+    .recipe .preparing .ingredients button.add-to-cart,
+    .recipe .preparing .directions button.tag-us {
+        padding: 10px 20px;
+        border: 2px solid var(--dark-border-color);
+        background-color: unset;
+        border-radius: var(--extreme-border-radius);
+        cursor: pointer;
+        transition: var(--fast-transition);
+    }
+    .recipe .preparing .ingredients button.add-to-cart:hover,
+    .recipe .preparing .directions button.tag-us:hover {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+        color: var(--light-text-color);
+    }
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]
+        + label::before {
+        content: "\2713";
+        font-weight: 900;
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(0, 0, 0, 0.75);
+        border-radius: var(--extreme-border-radius);
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: var(--fast-transition);
+    }
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]:checked
+        + label::before {
+        background-color: var(--main-color);
+        color: var(--light-text-color);
+        border-color: var(--main-color);
+    }
+    .recipe .preparing .directions ul li input[class="step-checkbox"] + label,
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]
+        + label
+        + p {
+        transition: var(--fast-transition);
+    }
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]:checked
+        + label {
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .recipe
+        .preparing
+        .directions
+        ul
+        li
+        input[class="step-checkbox"]:checked
+        + label
+        + p {
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: line-through;
+    }
+}

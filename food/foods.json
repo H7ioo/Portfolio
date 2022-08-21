@@ -1,0 +1,72 @@
+[
+    {
+        "href": "Rice with peas",
+        "title": "رز بالبزالية",
+        "main-ingredients": ["رز", "لحمة", "بزالية", "لبن"],
+        "all-ingredients": [
+            { "ingredient": "رز", "amount": "2", "meter": "كاسة" }
+        ],
+        "directions": ["Ready the oven at 360C"],
+        "notes": []
+    },
+    {
+        "title": "جاج صيني",
+        "main-ingredients": ["رز", "جاج", "فليفلة"]
+    },
+    {
+        "title": "معكرونة بلبن",
+        "main-ingredients": ["معكرونة", "لحمة", "لبن"]
+    },
+    {
+        "title": "يبرق",
+        "main-ingredients": ["ورق عنب", "لحمة", "رز", "لية"]
+    },
+    {
+        "title": "كسدلا",
+        "main-ingredients": ["جاج", "فليفلة", "خبز", "جبنة"]
+    },
+    {
+        "title": "شاكرية",
+        "main-ingredients": ["رز", "لبن", "لحمة"]
+    },
+    {
+        "title": "كبسة",
+        "main-ingredients": ["رز بسمتي", "جاج"]
+    },
+    {
+        "title": "معكرونة حمرة",
+        "main-ingredients": ["معكرونة", "لحمة"]
+    },
+    {
+        "title": "مقلوبة",
+        "main-ingredients": ["رز", "بيتنجان", "لحمة"]
+    },
+    {
+        "title": "بشاميل",
+        "main-ingredients": ["معكرونة", "جبنة", "لحمة", "كريمة"]
+    },
+    {
+        "title": "رز بالفول",
+        "main-ingredients": ["رز", "فول", "لحمة"]
+    },
+    {
+        "title": "جاج بالكاري",
+        "main-ingredients": ["معكرونة", "جاج"]
+    },
+    {
+        "title": "فخدة بالبطاطة",
+        "main-ingredients": ["جاج", "بطاطة", "رز"]
+    },
+    {
+        "title": "مندي",
+        "main-ingredients": ["رز بسمتي", "جاج"]
+    },
+    {
+        "title": "شيش",
+        "main-ingredients": ["جاج", "خبز"]
+    },
+    {
+        "title": "رز بالحمص",
+        "main-ingredients": ["رز", "حمص", "جاج"]
+    }
+]

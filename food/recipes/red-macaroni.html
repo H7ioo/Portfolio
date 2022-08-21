@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- todo Select an icon -->
+        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <title>Recipest |</title>
+        <!-- Normalize -->
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/css/all.min.css" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="/css/main.css" />
+        <!-- jQuery -->
+        <script src="/js/jquery.min.js" defer></script>
+        <!-- SweetAlert2 -->
+        <script src="/js/sweetalert2.all.min.js" defer></script>
+        <!-- HTML2CANVAS -->
+        <script src="/js/html2canvas.min.js" defer></script>
+        <!-- Main JS -->
+        <script src="/js/main.js" type="module" defer></script>
+        <!-- Recipes JS -->
+        <script src="/js/recipe.js" type="module" defer></script>
+        <!-- Google Font - Arabic -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Google Font - English -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- # Start Header -->
+        <header id="header">
+            <div class="container">
+                <a href="#" class="logo"
+                    ><i class="fa-solid fa-utensils"></i> Recipest</a
+                >
+                <nav class="navbar">
+                    <span class="header-burger-menu"></span>
+                    <ul class="lis">
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="/recipes.html">Recipes</a></li>
+                        <li><a href="#">Language: EN</a></li>
+                        <li>
+                            <a class="mega-menu-button" href="#">Others</a>
+                            <div class="mega-menu">
+                                <ul>
+                                    <li><a href="#">Generator</a></li>
+                                    <li><a href="#">Section 2</a></li>
+                                    <li><a href="#">Section 3</a></li>
+                                    <li><a href="#">Section 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- # End Header -->
+        <!-- # Start Recipe -->
+        <section class="recipe" id="recipe">
+            <div class="container">
+                <template id="recipe-template">
+                    <div class="recipe-info">
+                        <div class="text">
+                            <h1></h1>
+                            <div class="image-container">
+                                <div class="image">
+                                    <img />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons" data-html2canvas-ignore>
+                            <button class="save">
+                                <i class="fa-regular fa-heart"></i> Save
+                            </button>
+                            <!-- <button class="share">
+                                <i class="fa-solid fa-share"></i>
+                                Share
+                            </button> -->
+                            <!-- <button class="print">
+                                <i class="fa-solid fa-print"></i>
+                                Print
+                            </button> -->
+                            <button class="screenshot">
+                                <i class="fa-regular fa-image"></i>
+                                Screenshot
+                            </button>
+                        </div>
+                    </div>
+                    <div class="preparing">
+                        <div class="ingredients">
+                            <hr class="divider" />
+                            <h2>Ingredients</h2>
+                            <ul>
+                                <template id="ingredient-template">
+                                    <li class="ingredient">
+                                        <input
+                                            type="checkbox"
+                                            class="ingredient-checkbox"
+                                        />
+                                        <label class="ingredient-label">
+                                            <p dir="auto"></p>
+                                        </label>
+                                    </li>
+                                </template>
+                            </ul>
+                            <button class="add-to-cart" data-html2canvas-ignore>
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add <span class="count">all</span>
+                                <span class="plural">ingredients</span> to cart
+                            </button>
+                        </div>
+                        <div class="directions">
+                            <hr class="divider" />
+                            <h2>Directions</h2>
+                            <ul class="steps">
+                                <template id="steps-template">
+                                    <li class="step">
+                                        <input
+                                            type="checkbox"
+                                            class="step-checkbox"
+                                        />
+                                        <label class="step-label"></label>
+                                        <p></p>
+                                    </li>
+                                </template>
+                            </ul>
+                            <button class="tag-us" data-html2canvas-ignore>
+                                <i class="fa-solid fa-spoon"></i> Made It? Share
+                                It And Tag Us #recipest
+                            </button>
+                        </div>
+                        <div class="notes">
+                            <hr class="divider" />
+                            <h2>Notes</h2>
+                            <ol>
+                                <template id="notes-template">
+                                    <li class="note"></li>
+                                </template>
+                            </ol>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        <!-- # End Recipe -->
+        <!-- # Start Footer -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/omar_7ioo/"
+                            target="_blank"
+                            class="fa-brands fa-instagram ig"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/omar.jano.52/"
+                            target="_blank"
+                            class="fa-brands fa-facebook-f fac"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://twitter.com/omar_7ioo"
+                            target="_blank"
+                            class="fa-brands fa-twitter twit"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/H7ioo"
+                            target="_blank"
+                            class="fa-brands fa-github git"
+                        ></a>
+                    </li>
+                </ul>
+                <p>
+                    Made By
+                    <a class="me" href="https://7ioo.site/about">Omar Jano</a>
+                </p>
+            </div>
+        </footer>
+        <!-- # End Footer -->
+        <!-- # Start Hover Top Button -->
+        <span class="hover-top"><i class="fa-solid fa-angles-up"></i></span>
+        <!-- # End Hover Top Button -->
+    </body>
+</html>

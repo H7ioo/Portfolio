@@ -1,0 +1,162 @@
+[
+    {
+        "href": "rice with peas",
+        "title": "rice with peas",
+        "main-ingredients": ["rice", "meat", "peas", "yogurt"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "chinese chicken",
+        "title": "chinese chicken",
+        "main-ingredients": ["chicken", "rice", "pepper"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "yogurt macaroni",
+        "title": "yogurt macaroni",
+        "main-ingredients": ["yogurt", "meat", "pasta"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "yabrak",
+        "title": "yabrak",
+        "main-ingredients": ["grape leaves", "meat", "rice", "tail fat"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "quesadilla",
+        "title": "quesadilla",
+        "main-ingredients": ["chicken", "pepper", "bread", "cheese"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "shakriyeh",
+        "title": "shakriyeh",
+        "main-ingredients": ["meat", "yogurt", "rice"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "kabsa",
+        "title": "kabsa",
+        "main-ingredients": ["basmati rice", "chicken"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "red macaroni",
+        "title": "red macaroni",
+        "main-ingredients": ["meat", "pasta"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "maqluba",
+        "title": "maqluba",
+        "main-ingredients": ["rice", "eggplant", "meat"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "macarona bechamel",
+        "title": "macarona bechamel",
+        "main-ingredients": ["pasta", "cheese", "meat", "cream"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "rice with lima beans",
+        "title": "rice with lima beans",
+        "main-ingredients": ["rice", "lima beans", "meat"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "chicken curry",
+        "title": "chicken curry",
+        "main-ingredients": ["pasta", "chicken"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "potato with chicken thighs",
+        "title": "potato with chicken thighs",
+        "main-ingredients": ["rice", "chicken", "potato"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "mandi",
+        "title": "mandi",
+        "main-ingredients": ["basmati rice", "chicken"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "shish",
+        "title": "shish",
+        "main-ingredients": ["bread", "chicken"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    },
+    {
+        "href": "rice with chickpea",
+        "title": "rice with chickpea",
+        "main-ingredients": ["rice", "chicken", "chickpeas"],
+        "all-ingredients": [
+            { "ingredient": "rice", "amount": "2", "meter": "cups" }
+        ],
+        "directions": ["ready the oven at 360C"],
+        "notes": ["note 1"]
+    }
+]

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- todo Select an icon -->
+        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <title>Recipest | Recipes</title>
+        <!-- Normalize -->
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/css/all.min.css" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="/css/main.css" />
+        <!-- jQuery -->
+        <script src="/js/jquery.min.js" defer></script>
+        <!-- Main JS -->
+        <script src="/js/main.js" type="module" defer></script>
+        <!-- Recipes JS -->
+        <script src="/js/recipes.js" type="module" defer></script>
+        <!-- Google Font - Arabic -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Google Font - English -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- # Start Header -->
+        <header id="header">
+            <div class="container">
+                <a href="#" class="logo"
+                    ><i class="fa-solid fa-utensils"></i> Recipest</a
+                >
+                <nav class="navbar">
+                    <span class="header-burger-menu"></span>
+                    <ul class="lis">
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Language: EN</a></li>
+                        <li>
+                            <a class="mega-menu-button" href="#">Others</a>
+                            <div class="mega-menu">
+                                <ul>
+                                    <li><a href="#">Generator</a></li>
+                                    <li><a href="#">Section 2</a></li>
+                                    <li><a href="#">Section 3</a></li>
+                                    <li><a href="#">Section 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- # End Header -->
+        <!-- # Start Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h1 class="recipes-count">Recipes Count:</h1>
+            </div>
+            <div class="container">
+                <div class="cards"></div>
+                <template data-recipes-card-template>
+                    <div class="card">
+                        <a class="image">
+                            <img class="skeleton" />
+                        </a>
+                        <div class="info">
+                            <h2 class="skeleton skeleton-text"></h2>
+                            <h3 class="skeleton skeleton-text"></h3>
+                            <a class="skeleton skeleton-text"></a>
+                        </div>
+                    </div>
+                </template>
+                <div class="filter-box">
+                    <input
+                        dir="auto"
+                        type="search"
+                        name=""
+                        id="recipes-search"
+                        placeholder="&#xF002; Search"
+                    />
+                    <div class="filter-box-menu">
+                        <span class="close-filter-menu"
+                            ><i class="fa-solid fa-xmark"></i
+                        ></span>
+                        <div class="checkboxes">
+                            <!-- todo click event dont-include, include -->
+                        </div>
+                        <div class="buttons">
+                            <button class="filter" type="submit">Filter</button>
+                            <button class="clear-all" type="submit">
+                                Clear All
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="filter-menu-button">Filter</button>
+        </section>
+        <!-- # End Recipes -->
+        <!-- # Start Footer -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/omar_7ioo/"
+                            target="_blank"
+                            class="fa-brands fa-instagram ig"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/omar.jano.52/"
+                            target="_blank"
+                            class="fa-brands fa-facebook-f fac"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://twitter.com/omar_7ioo"
+                            target="_blank"
+                            class="fa-brands fa-twitter twit"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/H7ioo"
+                            target="_blank"
+                            class="fa-brands fa-github git"
+                        ></a>
+                    </li>
+                </ul>
+                <p>
+                    Made By
+                    <a class="me" href="https://7ioo.site/about">Omar Jano</a>
+                </p>
+            </div>
+        </footer>
+        <!-- # End Footer -->
+
+        <!-- # Start Hover Top Button -->
+        <span class="hover-top"><i class="fa-solid fa-angles-up"></i></span>
+        <!-- # End Hover Top Button -->
+    </body>
+</html>
