@@ -212,6 +212,7 @@ ul {
   transition: var(--fast-transition);
   color: white;
 }
+
 .main-header {
   font-weight: 700;
   margin: 0;
@@ -222,7 +223,7 @@ ul {
 }
 
 .landing {
-  background-image: url("/utilities/images/landing-1.jpg");
+  background-image: url("../images/landing-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -546,6 +547,7 @@ ul {
 }
 .footer p {
   letter-spacing: 1px;
+  text-align: center;
 }
 .footer p svg {
   -webkit-animation: float 2.5s ease-in-out infinite alternate;

@@ -128,6 +128,7 @@ navClick();
 removeClassOnResize(992);
 scrollToTop();
 resetLocalStorage();
+copyRightDate();
 // - End RUN
 function backgroundInterval() {
   // If staticBackground Is True Return (It's useless)
@@ -468,4 +469,8 @@ function resetLocalStorage() {
     localStorage.clear();
     window.location.reload();
   };
+}
+function copyRightDate() {
+  let date = new Date();
+  copyrightDate.textContent = date.getFullYear();
 }
