@@ -491,6 +491,40 @@ ul {
   transform: translate(-1.1rem, 1.1rem);
 }
 
+.contact-us {
+  background-color: var(--section-background-color);
+}
+.contact-us form input {
+  border: none;
+  border-color: transparent;
+  box-shadow: 2px 2px 2px 0px var(--main-color);
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  transition: var(--fast-transition);
+}
+.contact-us form textarea {
+  border: none;
+  border-color: transparent;
+  box-shadow: 2px 2px 2px 0px var(--main-color);
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  transition: var(--fast-transition);
+  min-height: 200px;
+}
+.contact-us form input[type=submit] {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+}
+.contact-us form input[type=submit]:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+
 .footer {
   background-color: var(--main-color);
   transition: var(--fast-transition);

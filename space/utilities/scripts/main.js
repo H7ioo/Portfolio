@@ -20,6 +20,7 @@ let staticBackground = false;
 let changeBackgroundsInterval;
 let animationOneTimeout;
 let animationTwoTimeout;
+let lastRandomNumber;
 // - End Variables
 // - Start Components
 function removeAllActiveFromLi(elements) {
@@ -41,7 +42,7 @@ function setBackground(element, src) {
   // Get Image Number From Src
   // ! NOTE: If The Source Image Contains Random Numbers Or More Than One Number It's Not Going To Work
   // ? You Can Give Bullets data-attribute And Activating The Bullets Depending On The Same Attribute On The Image, You Can Use The Same Concept With The SlideShow Instead Of NextSibling
-  let imageSrc = element.src.match(/utilities.*/gi);
+  let imageSrc = element.src.match(/\/utilities.*/gi);
   let imageNumber = `${imageSrc}`.match(/\d+/gi);
   let bullet = document.querySelector(
     `.random-backgrounds .bullets li:nth-child(${imageNumber[0]})`
@@ -140,8 +141,16 @@ function changeLandingBackground() {
   const imageCount = 5;
   // From 1 To 5
   let randomNumber = Math.ceil(Math.random() * imageCount);
+  // If Last Number Is Defined
+  if (lastRandomNumber) {
+    // While The Last Number Is The Same As The New One Generate A New Number
+    while (lastRandomNumber === randomNumber) {
+      randomNumber = Math.ceil(Math.random() * imageCount);
+    }
+  }
+  lastRandomNumber = randomNumber;
   // Background Src
-  let background = `/utilities/images/landing-${randomNumber}.jpg`;
+  let background = `./utilities/images/landing-${randomNumber}.jpg`;
   // Change Landing Style Background
   landing.style.backgroundImage = `url("${background}")`;
 }
@@ -283,11 +292,11 @@ function selectImage() {
     let activeImage = document.querySelector(
       ".random-backgrounds .images li.active img"
     );
-    let activeImageSrc = activeImage.src.match(/utilities.*/gi);
+    let activeImageSrc = activeImage.src.match(/\/utilities.*/gi);
     // Change Landing Background
     landing.style.backgroundImage = `url("${activeImageSrc}")`;
     // Add To Local Storage
-    localStorage.setItem("landingBackground", activeImageSrc);
+    localStorage.setItem("landingBackground", `.${activeImageSrc}`);
   };
 }
 function changeRandomSpeed() {
@@ -337,6 +346,15 @@ function setBoxBackgroundSVG() {
   const boxes = document.querySelectorAll(".testimonials .boxes .box");
   let mainColor =
     document.documentElement.style.getPropertyValue("--main-color");
+  // If Color Not Found Get It By Another Way
+  if (!mainColor) {
+    mainColor = getComputedStyle(document.documentElement).getPropertyValue(
+      "--main-color"
+    );
+  }
+  // Replace Spaces (For Handling Errors)
+  mainColor = mainColor.replace(/\s/gi, "");
+  // Make The Format
   let mainColorFormat = `%23${mainColor.slice(1)}`;
   boxes.forEach((box) => {
     box.style.backgroundImage = `url('data:image/svg+xml;utf8,<svg id="visual" viewBox="0 0 1000 400" width="1000" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 179L18.5 178.7C37 178.3 74 177.7 111 189.3C148 201 185 225 222 235.2C259 245.3 296 241.7 333 227.3C370 213 407 188 444.2 173C481.3 158 518.7 153 555.8 155.8C593 158.7 630 169.3 667 177.3C704 185.3 741 190.7 778 193.2C815 195.7 852 195.3 889 193.3C926 191.3 963 187.7 981.5 185.8L1000 184L1000 401L981.5 401C963 401 926 401 889 401C852 401 815 401 778 401C741 401 704 401 667 401C630 401 593 401 555.8 401C518.7 401 481.3 401 444.2 401C407 401 370 401 333 401C296 401 259 401 222 401C185 401 148 401 111 401C74 401 37 401 18.5 401L0 401Z" fill="${mainColorFormat}" stroke-linecap="round" stroke-linejoin="miter"></path></svg>')`;
@@ -344,12 +362,16 @@ function setBoxBackgroundSVG() {
 }
 function navClick() {
   navToggle.onclick = function () {
+    // Add Active To Logo And Navbar With Hiding Scroll
     navBar.classList.toggle("active");
     document.body.classList.toggle("hide-scroll");
     logo.classList.toggle("active");
+    // If The Navbar Is Active
     if (navBar.classList.contains("active")) {
+      // Start Animation
       addAnimation();
       let navLink = document.querySelectorAll("#navBar li a");
+      // If Any Link Is Clicked Return Everything To Normal
       navLink.forEach((a) => {
         a.onclick = function () {
           clearToggle();
@@ -361,17 +383,21 @@ function navClick() {
   };
 }
 function addAnimation() {
+  // Clear Timeout So If He Clicks So Fast
   clearTimeout(animationOneTimeout);
   clearTimeout(animationTwoTimeout);
+  // The Animation
   navToggle.children.item(0).style.transform = "translateX(-50%)";
   navToggle.children.item(1).style.opacity = "0";
   navToggle.children.item(2).style.transform = "translateX(-50%)";
+  // Second Part
   animationOneTimeout = setTimeout(() => {
     navToggle.children.item(0).style.transform =
       "translateY(calc(-1rem - 3px)) translateX(-50%) rotate(+45deg";
     navToggle.children.item(2).style.transform =
       "translateY(calc(1rem)) translateX(-50%) rotate(-45deg";
   }, 250);
+  // Third Part
   animationTwoTimeout = setTimeout(() => {
     navToggle.children.item(0).style.transform =
       "translateY(calc(0.25rem + 3px)) rotate(+45deg";
@@ -393,6 +419,7 @@ function addAnimation() {
   // }, 300);
 }
 function clearAnimation() {
+  // Stop Animation
   clearTimeout(animationOneTimeout);
   clearTimeout(animationTwoTimeout);
   navToggle.children.item(0).style.transform = "";
@@ -400,12 +427,15 @@ function clearAnimation() {
   navToggle.children.item(2).style.transform = "";
 }
 function clearToggle() {
+  // Clear Active And Scroll
   navBar.classList.remove("active");
   document.body.classList.remove("hide-scroll");
   logo.classList.remove("active");
+  // Stop Animation And Return To Normal State
   clearAnimation();
 }
 function removeClassOnResize(media) {
+  // If The Media Is Changed, Reset Active, Scroll Classes...
   let pastWidth = window.innerWidth;
   window.addEventListener("resize", function () {
     let width = window.innerWidth;
@@ -420,17 +450,20 @@ function removeClassOnResize(media) {
   });
 }
 function scrollToTop() {
+  // If Scrolled After Landing Show Button
   window.addEventListener("scroll", (event) => {
     hoverToTop.classList.toggle(
       "active",
       window.scrollY >= landing.scrollHeight
     );
   });
+  // If Button Is Clicked Scroll To Top
   hoverToTop.onclick = function () {
     window.scrollTo(0, 0);
   };
 }
 function resetLocalStorage() {
+  // Clear Storage And Reload Page
   resetAll.onclick = function () {
     localStorage.clear();
     window.location.reload();

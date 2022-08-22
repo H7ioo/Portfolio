@@ -54,6 +54,17 @@ ul {
     }
   }
 }
+@mixin formInput() {
+  border: none;
+  border-color: transparent;
+  // border-bottom: 1px solid var(--main-color);
+  box-shadow: 2px 2px 2px 0px var(--main-color);
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  transition: var(--fast-transition);
+}
 // # End Global
 // # Start Components
 .hover-to-top {
@@ -260,8 +271,6 @@ ul {
       cursor: pointer;
       transition: var(--fast-transition);
       color: white;
-      &:hover {
-      }
     }
   }
 }
@@ -276,7 +285,7 @@ ul {
 // # End Components
 // # Start Landing
 .landing {
-  background-image: url("/utilities/images/landing-1.jpg");
+  background-image: url("../images/landing-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -534,6 +543,25 @@ ul {
 // # End Testimonials
 // # Start Contact Us
 .contact-us {
+  background-color: var(--section-background-color);
+  form {
+    input {
+      @include formInput();
+    }
+    textarea {
+      @include formInput();
+      min-height: 200px;
+    }
+    input[type="submit"] {
+      border: none;
+      background-color: var(--main-color);
+      color: white;
+      &:hover {
+        background-color: white;
+        color: var(--main-color);
+      }
+    }
+  }
 }
 // # End Contact Us
 // # Start Footer
