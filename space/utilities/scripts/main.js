@@ -295,7 +295,7 @@ function selectImage() {
     );
     let activeImageSrc = activeImage.src.match(/\/utilities.*/gi);
     // Change Landing Background
-    landing.style.backgroundImage = `url("${activeImageSrc}")`;
+    landing.style.backgroundImage = `url(".${activeImageSrc}")`;
     // Add To Local Storage
     localStorage.setItem("landingBackground", `.${activeImageSrc}`);
   };
