@@ -1,4 +1,4 @@
-import blogsData from "/utilities/scripts/blogsData.js";
+import blogsData from "./blogsData.js";
 
 let language = localStorage.getItem("language");
 let blogs = blogsData[language];

@@ -1,7 +1,7 @@
 // - Start Variables
 import translations from "./translations.js";
 const defaultLanguage = "en";
-const rtlStyleSheetPath = "/utilities/styles/main-rtl.css";
+const rtlStyleSheetPath = "./utilities/styles/main-rtl.css";
 // - End Variables
 
 // - Start RUN

@@ -261,79 +261,76 @@ let translations = {
       blogs: {
         mainTitle: "المدونات",
         mainDescription:
-          // انا اكتب عن الأشياء الي تعلمتها او فادتني او مهتم فيها...
           "انا اكتب عن الأشياء الي تعلمتها او فادتني او مهتم فيها...",
-        maintenance: "this section is suspended for a while...",
+        // انا اكتب عن الأشياء الي تعلمتها او فادتني او مهتم فيها...
+        maintenance: "هذا القسم مغلق لفترة...",
         card: {
-          number: "Number:",
-          category: "Categories: ",
-          readMore: "Read More",
+          number: "الرقم:",
+          category: "التصنيف: ",
+          readMore: "المزيد",
         },
       },
     },
     about: {
       about: {
-        mainTitle: "About Me",
+        mainTitle: "عني",
         aboutMe: {
           paragraph_1: {
-            part_1: "My name is Omar Jano. My birthdate is 27.4.2006.",
+            part_1: "اسمي عمر جانو. تاريخ ميلادي هو 27.4.2006.",
             part_2:
-              "I'm Syrian living in Turkey. I speak 3 languages in the meantime, English, Turkish and Arabic.",
+              "انا سوري عايش بتركيا. بتكلم 3 لغات, انقليزي, عربي و تركي بالوقت الحالي.",
           },
           paragraph_2: {
             part_1:
-              "I'm learning programming so I can work as a programmer. I'm on the Full-Stack roadmap.",
-            part_2: "My goal is to be a professional Full-Stack developer.",
+              "انا ادرس برمجة على شان اشتغل كمبرمج. انا على خطة الـ Full-Stack.",
+            part_2: "هدفي اني اكون مبرمج Full-Stack محترف.",
           },
-          paragraph_3:
-            "I work as a real estate agent and a translator (I'm new to it).",
+          paragraph_3: "أنا أعمل كوكيل عقارات ومترجم (أنا جديد في هذا المجال).",
         },
         questions: {
-          mainTitle: "Questions",
+          mainTitle: "الأسئلة",
           question_1: {
-            part_1: "Q: When did you start coding?",
+            part_1: "س: متى بدأت بالبرمجة؟",
             part_2:
-              "A: As I remember, I started learning in 2017. I didn't take it seriously as I do now.",
+              "ج: حسب ما اتذكر, بدأت في 2017. ما كنت اخذها بجدية مثل الوقت الحالي.",
           },
           question_2: {
-            part_1: "Q: Where are you at the roadmap?",
-            part_2: "A: You can check the references for the roadmap link.",
+            part_1: "س: وين انت في خطة الدراسة؟",
+            part_2: "ج: شيك المصادر هناك موجود الرابط.",
           },
           question_3: {
-            part_1: "Q: What resources did you use for learning programming?",
+            part_1: "س: ما الموارد التي استخدمتها لتعلم البرمجة؟",
             part_2:
-              "A: I used all kinds of resources, but the most rely was on Elzero Web School.",
+              "ج: لقد استخدمت جميع أنواع الموارد ، ولكن معظم الاعتماد كان على Elzero Web School.",
           },
           question_4: {
-            part_1: "Q: Do you work as a programmer?",
-            part_2:
-              "A: No, I don't. When I finish React.js I'll start working as a freelancer.",
+            part_1: "س: هل تعمل كمبرمج؟",
+            part_2: "ج: لا,  بعد React.js رح ابدأ كعامل حر.",
           },
         },
         others: {
-          mainTitle: "Others",
+          mainTitle: "اخرى",
           accordion: {
             references: {
-              mainTitle: "References",
-              roadMap: "RoadMap",
-              watchingList: "Watching list",
-              bookshelf: "Bookshelf",
-              trainingProgram: "Training program",
+              mainTitle: "المصادر",
+              roadMap: "خطة الدراسة",
+              watchingList: "قائمة المتابعة",
+              bookshelf: "المكتبة",
+              trainingProgram: "برنامج التمرين",
             },
             portfolio: {
-              mainTitle: "Portfolio",
-              recipesWebsite: "Recipes website",
-              geographyGame: "Geography game  ",
+              mainTitle: "سابق الأعمال",
+              recipesWebsite: "موقع الوصفات",
+              geographyGame: "لعبة الجوغرافيا",
             },
             hobbies: {
-              mainTitle: "Hobbies",
-              description:
-                "I have a lot of hobbies, but those are the main ones:",
-              programming: "Programming",
-              learning: "Learning and trying new things",
-              watching: "Watching anime",
-              listening: "Listening to music",
-              weight: "Weight lifting",
+              mainTitle: "الهوايات",
+              description: "عندي الكثير من الهوايات, لاكن هذول هم الأساسيين:",
+              programming: "البرمجة",
+              learning: "تعلم و تجربة اشياء جديدة",
+              watching: "متابعة الأنمي",
+              listening: "استماع للمسيقى",
+              weight: "رفع الأثقال",
             },
           },
         },
