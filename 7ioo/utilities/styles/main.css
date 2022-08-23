@@ -105,7 +105,7 @@ footer p svg {
 .landing {
   /* ? pb-5 + header height */
   padding-top: calc(3rem + 72px);
-  background-image: url("/utilities/images/landing.jpg");
+  background-image: url("../images/landing.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -122,7 +122,7 @@ footer p svg {
 .blogs {
   /* ? pb-5 + header height */
   padding-top: calc(3rem + 72px);
-  background-image: url("/utilities/images/blogs.svg");
+  background-image: url("../images/blogs.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -223,7 +223,7 @@ footer p svg {
 .about {
   /* ? pb-5 + header height */
   padding-top: calc(3rem + 72px);
-  background-image: url("/utilities/images/about.svg");
+  background-image: url("../images/about.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
