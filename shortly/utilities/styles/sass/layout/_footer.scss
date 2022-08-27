@@ -1,0 +1,30 @@
+.footer {
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+  color: $lightTextColor;
+  background-color: $neutralViolet;
+  .logo {
+    font-weight: 700;
+  }
+  div {
+    ul {
+      li {
+        a {
+          transition: $fastTransition;
+          color: $neutralGray;
+          &:hover {
+            color: $primaryCyan;
+          }
+        }
+      }
+    }
+    &.social {
+      a {
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+        color: $lightTextColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.main-btn.circle-btn {
+  @include button(true);
+}
+.main-btn.rectangle-btn {
+  @include button(false);
+}

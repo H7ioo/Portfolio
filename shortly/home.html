@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ? ICON -->
+    <link
+      rel="shortcut icon"
+      href="./utilities/images/ICON.png"
+      type="image/x-icon"
+    />
+    <title>Shortly</title>
+    <!-- Google Font -->
+    <!-- ? GOOGLE FONT -->
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./utilities/styles/all.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./utilities/styles/bootstrap.min.css" />
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./utilities/styles/normalize.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./utilities/styles/main.css" />
+    <!-- jQuery -->
+    <script src="./utilities/scripts/jquery.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="./utilities/scripts/all.min.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="./utilities/scripts/bootstrap.bundle.min.js" defer></script>
+    <!-- Main JS -->
+    <script src="./utilities/scripts/main.js" defer></script>
+  </head>
+  <body>
+    <!-- # Start Header -->
+    <div class="header d-flex align-items-center">
+      <div
+        class="container d-flex align-items-center gap-4 justify-content-between"
+      >
+        <h1 class="logo"><img src="./utilities/images/logo.svg" alt="" /></h1>
+        <div class="nav-toggler d-flex d-lg-none">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- ? CLASS OPEN -->
+        <div class="nav justify-content-between w-100 d-lg-flex">
+          <ul class="d-flex gap-lg-1">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+          <ul class="d-flex gap-lg-3">
+            <li><a href="#">Login</a></li>
+            <li><a class="main-btn circle-btn" href="#">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- # End Header -->
+    <!-- # Start Landing -->
+    <div class="landing">
+      <div
+        class="container d-flex align-items-center gap-5 flex-lg-row flex-column-reverse"
+      >
+        <div class="text flex-shrink-0 text-lg-start text-center">
+          <h1>More than just shorter links</h1>
+          <p class="mb-4">
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a class="main-btn circle-btn fs-5" href="#">Get Started</a>
+        </div>
+        <div class="image">
+          <img
+            src="./utilities/images/illustration-working.svg"
+            alt="illustration-working"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- # End Landing -->
+    <!-- # Start Form -->
+    <div class="form">
+      <div class="container">
+        <form
+          class="d-flex justify-content-between gap-4 flex-md-row flex-column"
+        >
+          <div class="flex-grow-1 mb-md-0 mb-4">
+            <!-- ? not-valid -->
+            <input
+              class="add-link flex-grow-1 w-100"
+              type="text"
+              placeholder="Shorten a link here..."
+            />
+            <span class="mt-2">Please add a link</span>
+          </div>
+          <input
+            class="shorten main-btn rectangle-btn"
+            type="submit"
+            value="Shorten It!"
+          />
+        </form>
+      </div>
+    </div>
+    <!-- # End Form -->
+    <!-- # Start Links -->
+    <div class="links pt-4">
+      <div class="container">
+        <div class="boxes d-flex flex-column gap-3">
+          <template class="links-template">
+            <div class="box d-flex gap-md-4 gap-2 flex-md-row flex-column">
+              <div
+                class="link d-flex justify-content-between align-items-center w-100 flex-md-row flex-column"
+              >
+                <a class="mb-md-0 mb-2" href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
+              </div>
+              <a class="copy-link main-btn rectangle-btn" href="#">Copy</a>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <!-- # End Links -->
+    <!-- # Start Statistics -->
+    <div class="statistics">
+      <div class="container">
+        <div class="text my-5 pb-5">
+          <h1 class="text-center mb-2">Advanced Statistics</h1>
+          <p class="text-center mx-auto">
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+        <div
+          class="boxes gap-4 py-5 d-flex flex-lg-row flex-column text-lg-start text-center"
+        >
+          <div class="box">
+            <div class="image">
+              <img src="./utilities/images/icon-brand-recognition.svg" alt="" />
+            </div>
+            <h2 class="mb-3">Brand Recognition</h2>
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img src="./utilities/images/icon-detailed-records.svg" alt="" />
+            </div>
+            <h2 class="mb-3">Detailed Records</h2>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img
+                src="./utilities/images/icon-fully-customizable.svg"
+                alt=""
+              />
+            </div>
+            <h2 class="mb-3">Fully Customizable</h2>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- # End Statistics -->
+    <!-- # Start Boost -->
+    <div class="boost text-center">
+      <div class="container">
+        <h1 class="mb-5">Boost your links today</h1>
+        <a href="#" class="main-btn circle-btn fs-5">Get Started</a>
+      </div>
+    </div>
+    <!-- # End Boost -->
+    <!-- # Start Footer -->
+    <div class="footer">
+      <div
+        class="container d-flex justify-content-between gap-5 flex-md-row flex-column text-md-start text-center"
+      >
+        <h2 class="logo">Shortly</h2>
+        <div class="menu d-flex gap-5 flex-md-row flex-column">
+          <div class="features">
+            <p>Features</p>
+            <ul>
+              <li>
+                <a href="#">Link Shortening</a>
+              </li>
+              <li>
+                <a href="#">Branded Links</a>
+              </li>
+              <li>
+                <a href="#">Analytics</a>
+              </li>
+            </ul>
+          </div>
+          <div class="resources">
+            <p>Resources</p>
+            <ul>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Developers</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="company">
+            <p>Company</p>
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Our Team</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul
+              class="d-flex flex-lg-row flex-md-column gap-4 justify-content-center"
+            >
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-square-facebook fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-brands fa-twitter fa-2x"></i> </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-brands fa-pinterest fa-2x"></i> </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-brands fa-instagram fa-2x"></i> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- # End Footer -->
+  </body>
+</html>

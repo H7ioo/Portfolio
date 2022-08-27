@@ -1,0 +1,18 @@
+/*
+Pass True Or False, If True Rounded Corners If False Small Rounding
+*/
+@mixin button($rounded) {
+  padding: 10px 22px;
+  color: $lightTextColor;
+  background-color: $primaryCyan;
+  transition: $fastTransition;
+  font-weight: 700;
+  &:hover {
+    background-color: $primaryCyanHover;
+  }
+  @if $rounded == true {
+    border-radius: 1.5rem;
+  } @else {
+    border-radius: 0.75rem;
+  }
+}

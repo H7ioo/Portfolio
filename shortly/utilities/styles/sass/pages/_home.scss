@@ -1,0 +1,214 @@
+// # Start Landing
+.landing {
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+  overflow: hidden;
+  .text {
+    max-width: 500px;
+    width: 100%;
+    h1 {
+      font-weight: 700;
+      font-size: 4rem;
+      @media (max-width: 767px) {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      font-weight: 500;
+      color: $neutralGrayish;
+      font-size: 1.25rem;
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .image {
+    img {
+      @media (max-width: 768px) {
+        transform: translateX(175px);
+      }
+    }
+  }
+}
+// # End Landing
+// # Start Form
+.form {
+  background: linear-gradient(to bottom, white 50%, $gray 50%);
+  .container {
+    form {
+      border-radius: 0.75rem;
+      padding: 60px;
+      @media (max-width: 768px) {
+        padding: 25px;
+      }
+      background-image: url("../images/bg-shorten-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $primaryViolet;
+      position: relative;
+      span {
+        display: none;
+      }
+      input[type="text"] {
+        &:focus {
+          &::placeholder {
+            opacity: 0.5;
+            transition: $fastTransition;
+          }
+        }
+      }
+      input {
+        position: relative;
+        border: none;
+        outline: none;
+        padding: 20px 30px;
+        border-radius: 0.75rem;
+        &.not-valid {
+          outline: 3px solid $secondaryRed;
+          &::placeholder {
+            color: $secondaryRed;
+            transition: $fastTransition;
+          }
+          & + span {
+            display: block;
+            position: absolute;
+            font-style: italic;
+            color: $secondaryRed;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+// # End Form
+// # Start Links
+.links {
+  background-color: $gray;
+  padding-bottom: $sectionPaddingBottom;
+  .boxes {
+    .box {
+      .copy-link {
+        transition: $fastTransition;
+        &.copied {
+          background-color: $primaryViolet;
+        }
+      }
+      @media (max-width: 768px) {
+        border-radius: 0.75rem;
+      }
+      padding: 15px 25px;
+      background-color: white;
+      overflow: hidden;
+      > a {
+        width: fit-content;
+        margin: auto;
+      }
+      .link {
+        a {
+          font-weight: 500;
+          &:nth-child(1) {
+            position: relative;
+            color: $primaryViolet;
+            @media (max-width: 768px) {
+              &:after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: -250px;
+                height: 1px;
+                width: 1000px;
+                background-color: $neutralGray;
+              }
+            }
+          }
+          &:nth-child(2) {
+            color: $primaryCyan;
+          }
+        }
+      }
+    }
+  }
+}
+// # End Links
+// # Start Statistics
+.statistics {
+  padding-top: $sectionPaddingTop;
+  padding-bottom: calc($sectionPaddingBottom + 100px);
+  background-color: $gray;
+  h1 {
+    font-weight: 700;
+  }
+  h1 + p {
+    color: $neutralGrayish;
+    max-width: 550px;
+    line-height: 2rem;
+  }
+  .boxes {
+    position: relative;
+    .box {
+      // ? There is no need for absolute but I prefer it
+      background-color: white;
+      padding: 70px 30px 30px;
+      position: relative;
+      .image {
+        position: absolute;
+        width: fit-content;
+        border-radius: 50%;
+        background-color: $primaryViolet;
+        padding: 20px;
+        top: 0;
+        transform: translateY(-50%);
+        @media (max-width: 991px) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      h2 {
+        font-weight: 700;
+      }
+      p {
+        color: $neutralGrayish;
+      }
+      $num: -26px;
+      @for $i from 0 through 3 {
+        &:nth-child(#{$i}) {
+          transform: translateY($num);
+        }
+        $num: $num + 30px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(calc(-50%));
+      width: 100%;
+      height: 10px;
+      background-color: $primaryCyan;
+      @media (max-width: 991px) {
+        top: 3rem;
+        left: 50%;
+        height: calc(100% - 3rem);
+        width: 10px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+// # End Statistics
+// # Start Boost
+.boost {
+  padding-top: calc($sectionPaddingTop + 25px);
+  padding-bottom: calc($sectionPaddingBottom + 25px);
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $primaryViolet;
+  h1 {
+    color: $lightTextColor;
+    font-weight: 700;
+  }
+}
+// # End Boost
