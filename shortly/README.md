@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/H7ioo/Portfolio/tree/master/shortly)
-- Live Site URL: [Add live site URL here](https://h7ioo.github.io/Portfolio/shortly/home.html)
+- Solution URL: [https://github.com/H7ioo/Portfolio/tree/master/shortly](https://github.com/H7ioo/Portfolio/tree/master/shortly)
+- Live Site URL: [https://h7ioo.github.io/Portfolio/shortly/home.html](https://h7ioo.github.io/Portfolio/shortly/home.html)
 
 ## My process
 
