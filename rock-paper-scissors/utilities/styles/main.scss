@@ -1,0 +1,428 @@
+// - Variables
+$scissorsGradientFrom: hsl(28, 75%, 45%);
+$scissorsGradientTo: hsl(40, 84%, 53%);
+
+$paperGradientFrom: hsl(229, 65%, 46%);
+$paperGradientTo: hsl(230, 89%, 65%);
+
+$rockGradientFrom: hsl(346, 77%, 35%);
+$rockGradientTo: hsl(349, 70%, 56%);
+
+$cyanGradientFrom: hsl(189, 59%, 53%);
+$cyanGradientFrom: hsl(189, 58%, 57%);
+
+$darkText: hsl(229, 25%, 31%);
+$scoreText: hsl(229, 64%, 46%);
+$headerOutline: hsl(217, 16%, 45%);
+
+$backgroundFrom: hsl(214, 47%, 23%);
+$backgroundTo: hsl(237, 49%, 15%);
+
+$fastTransition: 0.3s;
+$slowTransition: 0.5s;
+
+// - Main Rules
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  // - Weights: 600, 700
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: linear-gradient(to bottom, $backgroundFrom, $backgroundTo);
+}
+a {
+  text-decoration: none;
+}
+ol {
+  list-style-position: inside;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+// - Container
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+// - Mixin
+@mixin card($card) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 87%);
+  width: 150px;
+  height: 150px;
+  transition: $fastTransition;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    width: 135px;
+    height: 135px;
+  }
+  border-radius: 50%;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+@mixin cardBefore {
+  width: max-content;
+  position: absolute;
+  top: -50%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+  @media (min-width: 767px) and (max-width: 850px) {
+    font-size: 1rem;
+  }
+}
+@mixin cardClicked {
+  &:hover {
+    transform: scale(1.5);
+    @media (max-width: 768px) {
+      transform: scale(1.2);
+    }
+  }
+  pointer-events: none;
+  transform: scale(1.5);
+  @media (max-width: 768px) {
+    transform: scale(1.2);
+  }
+}
+// # Main
+section.main {
+  min-height: 100vh;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vh;
+    z-index: 5;
+    background-color: rgba(black, 0.3);
+    opacity: 0;
+    transition: $fastTransition;
+    pointer-events: none;
+    &.open {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+  .rules {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    color: white;
+    border: 2px solid $headerOutline;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: $fastTransition;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: $darkText;
+    }
+    @media (max-width: 768px) {
+      right: 50%;
+      bottom: 100px;
+      transform: translateX(50%);
+    }
+  }
+  .reset {
+    @extend .rules;
+    left: 30px;
+    right: auto;
+    @media (max-width: 768px) {
+      left: 50%;
+      right: auto;
+      bottom: 50px;
+      transform: translateX(-50%);
+    }
+  }
+  .rules-menu {
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 15px;
+    z-index: 10;
+    pointer-events: none;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      h1 {
+        margin: 0;
+        color: $darkText;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+          margin: 0 auto;
+          position: relative;
+          margin-top: 100px;
+        }
+      }
+      span {
+        cursor: pointer;
+        @media (max-width: 768px) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 150px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    > img {
+      @media (max-width: 768px) {
+        width: 100%;
+        position: relative;
+        top: 35%;
+        transform: translateY(-50%);
+      }
+    }
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  .score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    max-width: 80vh;
+    margin: 0 auto;
+    transform: translateY(5vh);
+    border: 3px solid $headerOutline;
+    border-radius: 15px;
+    .image {
+      width: 100%;
+      img {
+        max-width: 100%;
+        @media (max-width: 768px) {
+          max-width: 75%;
+        }
+      }
+    }
+    .box {
+      background-color: hsl(0, 0%, 99%);
+      width: 200px;
+      height: fit-content;
+      border-radius: inherit;
+      padding: 15px;
+      text-align: center;
+      font-weight: 700;
+      p {
+        text-transform: uppercase;
+        color: $scoreText;
+        letter-spacing: 2px;
+      }
+      .score-counter {
+        font-size: 3.5rem;
+        color: $darkText;
+      }
+    }
+  }
+  .game-preview {
+    margin: 0 auto;
+    .images {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .play-again {
+        position: absolute;
+        top: 35%;
+        transition: $fastTransition;
+        z-index: 2;
+        @media (max-width: 768px) {
+          top: 100%;
+        }
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 2px;
+        width: max-content;
+        h1 {
+          font-size: 3.5rem;
+          text-align: center;
+        }
+        p {
+          color: $darkText;
+          font-weight: 700;
+          text-align: center;
+          background-color: white;
+          padding: 12.5px 22.5px;
+          border-radius: 10px;
+          transition: $fastTransition;
+          font-size: 1.25rem;
+          cursor: pointer;
+          &:hover {
+            color: $rockGradientTo;
+          }
+        }
+        &.hide {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+      .triangle {
+        @media (max-width: 768px) {
+          width: 280px;
+        }
+        &.hide {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+      .card {
+        position: absolute;
+        transition: $slowTransition;
+        &.paper {
+          @include card(paper);
+          border: 15px solid $paperGradientTo;
+          box-shadow: inset 0px 6px hsl(228, 23%, 78%), 0 6px $paperGradientFrom;
+          top: -50px;
+          left: -25px;
+        }
+        &.rock {
+          @include card(rock);
+          border: 15px solid $rockGradientTo;
+          box-shadow: inset 0px 6px hsl(228, 23%, 78%), 0 6px $rockGradientFrom;
+          top: calc(100% - 150px);
+          @media (max-width: 768px) {
+            top: calc(100% - 135px);
+          }
+          left: 75px;
+        }
+        &.scissors {
+          @include card(scissors);
+          border: 15px solid $scissorsGradientTo;
+          box-shadow: inset 0px 6px hsl(228, 23%, 78%),
+            0 6px $scissorsGradientFrom;
+          top: -50px;
+          left: calc(100% - 150px + 25px);
+          @media (max-width: 768px) {
+            left: calc(100% - 135px + 25px);
+          }
+        }
+        &.clicked {
+          &::before {
+            content: "You Picked";
+            @include cardBefore;
+          }
+          @include cardClicked;
+          top: 50px;
+          left: -150px;
+          right: unset;
+          @media (max-width: 768px) {
+            top: -25px;
+            left: -25px;
+          }
+        }
+        &.house {
+          pointer-events: none;
+          &::before {
+            content: "The house picked";
+            @include cardBefore;
+          }
+          @include cardClicked;
+
+          top: 50px;
+          left: unset;
+          right: -150px;
+          @media (max-width: 768px) {
+            top: -25px;
+            right: -25px;
+          }
+          &.hidden {
+            border-color: transparent;
+            box-shadow: none;
+            background-color: hsl(224, 46%, 17%);
+            img {
+              opacity: 0;
+            }
+          }
+        }
+        &.hide {
+          opacity: 0;
+          pointer-events: none;
+        }
+        &.win {
+          box-shadow: 0px 0px 0px 30px rgba(white, 0.03),
+            0px 0px 0px 60px rgba(white, 0.03),
+            0px 0px 0px 90px rgba(white, 0.03);
+          @media (max-width: 768px) {
+            box-shadow: 0px 0px 0px 20px rgba(white, 0.03),
+              0px 0px 0px 40px rgba(white, 0.03),
+              0px 0px 0px 60px rgba(white, 0.03);
+            z-index: -1;
+          }
+        }
+      }
+      .play-again:not(.hide) {
+        @media (min-width: 767px) {
+          ~ .card.clicked {
+            left: -175px;
+          }
+          ~ .card.house {
+            right: -175px;
+          }
+        }
+        @media (min-width: 880px) {
+          ~ .card.clicked {
+            left: -215px;
+          }
+          ~ .card.house {
+            right: -215px;
+          }
+        }
+      }
+    }
+  }
+}

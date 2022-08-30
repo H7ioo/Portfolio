@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link
+      rel="shortcut icon"
+      href="./utilities/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main Script -->
+    <script src="./utilities/scripts/main.js" defer></script>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="./utilities/styles/normalize.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./utilities/styles/main.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <section class="main">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="rules">
+          <p>Rules</p>
+        </div>
+        <div class="reset">
+          <p>Reset</p>
+        </div>
+        <div class="rules-menu">
+          <div>
+            <h1>Rules</h1>
+            <span class="close-menu"
+              ><img src="./utilities/images/icon-close.svg" alt=""
+            /></span>
+          </div>
+          <img src="./utilities/images/image-rules.svg" alt="" />
+        </div>
+        <div class="score">
+          <div class="image">
+            <img src="./utilities/images/logo.svg" alt="" />
+          </div>
+          <div class="box">
+            <p>Score</p>
+            <span class="score-counter">0</span>
+          </div>
+        </div>
+        <div class="game-preview">
+          <!-- ? game-done if win is on house show  {hide} textContent depends on who won-->
+          <div class="images">
+            <div class="play-again hide">
+              <h1>You Lose</h1>
+              <p>Play Again</p>
+            </div>
+            <img
+              class="triangle"
+              src="./utilities/images/bg-triangle.svg"
+              alt=""
+            />
+            <!-- ? Add hide to all without house and clicked {win} -->
+            <div class="card paper">
+              <img src="./utilities/images/icon-paper.svg" alt="" />
+            </div>
+            <div class="card rock">
+              <img src="./utilities/images/icon-rock.svg" alt="" />
+            </div>
+            <div class="card scissors">
+              <img src="./utilities/images/icon-scissors.svg" alt="" />
+            </div>
+            <!-- ? Set the class {rock, paper, scissors, hidden} Depending on the random -->
+            <div class="card rock house hidden hide">
+              <img src="./utilities/images/icon-rock.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Score
+    Rules
+  
+    You Picked
+    The House Picked
+  
+    You Win
+    You Lose
+  
+    Play Again -->
+  </body>
+</html>

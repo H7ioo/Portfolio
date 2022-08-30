@@ -1,0 +1,498 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: linear-gradient(to bottom, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
+}
+
+a {
+  text-decoration: none;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+section.main {
+  min-height: 100vh;
+}
+section.main .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+section.main .overlay.open {
+  pointer-events: all;
+  opacity: 1;
+}
+section.main .rules, section.main .reset {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  color: white;
+  border: 2px solid hsl(217deg, 16%, 45%);
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+section.main .rules:hover, section.main .reset:hover {
+  background-color: white;
+  color: hsl(229deg, 25%, 31%);
+}
+@media (max-width: 768px) {
+  section.main .rules, section.main .reset {
+    right: 50%;
+    bottom: 100px;
+    transform: translateX(50%);
+  }
+}
+section.main .reset {
+  left: 30px;
+  right: auto;
+}
+@media (max-width: 768px) {
+  section.main .reset {
+    left: 50%;
+    right: auto;
+    bottom: 50px;
+    transform: translateX(-50%);
+  }
+}
+section.main .rules-menu {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 15px;
+  z-index: 10;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  section.main .rules-menu {
+    width: 100%;
+    height: 100%;
+  }
+}
+section.main .rules-menu > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+section.main .rules-menu > div h1 {
+  margin: 0;
+  color: hsl(229deg, 25%, 31%);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  section.main .rules-menu > div h1 {
+    margin: 0 auto;
+    position: relative;
+    margin-top: 100px;
+  }
+}
+section.main .rules-menu > div span {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  section.main .rules-menu > div span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+  }
+  section.main .rules-menu > div span img {
+    width: 30px;
+  }
+}
+@media (max-width: 768px) {
+  section.main .rules-menu > img {
+    width: 100%;
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
+  }
+}
+section.main .rules-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+section.main .score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  max-width: 80vh;
+  margin: 0 auto;
+  transform: translateY(5vh);
+  border: 3px solid hsl(217deg, 16%, 45%);
+  border-radius: 15px;
+}
+section.main .score .image {
+  width: 100%;
+}
+section.main .score .image img {
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  section.main .score .image img {
+    max-width: 75%;
+  }
+}
+section.main .score .box {
+  background-color: hsl(0deg, 0%, 99%);
+  width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: inherit;
+  padding: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+section.main .score .box p {
+  text-transform: uppercase;
+  color: hsl(229deg, 64%, 46%);
+  letter-spacing: 2px;
+}
+section.main .score .box .score-counter {
+  font-size: 3.5rem;
+  color: hsl(229deg, 25%, 31%);
+}
+section.main .game-preview {
+  margin: 0 auto;
+}
+section.main .game-preview .images {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.main .game-preview .images .play-again {
+  position: absolute;
+  top: 35%;
+  transition: 0.3s;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .play-again {
+    top: 100%;
+  }
+}
+section.main .game-preview .images .play-again h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+section.main .game-preview .images .play-again p {
+  color: hsl(229deg, 25%, 31%);
+  font-weight: 700;
+  text-align: center;
+  background-color: white;
+  padding: 12.5px 22.5px;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+section.main .game-preview .images .play-again p:hover {
+  color: hsl(349deg, 70%, 56%);
+}
+section.main .game-preview .images .play-again.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .triangle {
+    width: 280px;
+  }
+}
+section.main .game-preview .images .triangle.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+section.main .game-preview .images .card {
+  position: absolute;
+  transition: 0.5s;
+}
+section.main .game-preview .images .card.paper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 87%);
+  width: 150px;
+  height: 150px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 15px solid hsl(230deg, 89%, 65%);
+  box-shadow: inset 0px 6px hsl(228deg, 23%, 78%), 0 6px hsl(229deg, 65%, 46%);
+  top: -50px;
+  left: -25px;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.paper {
+    width: 135px;
+    height: 135px;
+  }
+}
+section.main .game-preview .images .card.paper:hover {
+  transform: scale(1.1);
+}
+section.main .game-preview .images .card.rock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 87%);
+  width: 150px;
+  height: 150px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 15px solid hsl(349deg, 70%, 56%);
+  box-shadow: inset 0px 6px hsl(228deg, 23%, 78%), 0 6px hsl(346deg, 77%, 35%);
+  top: calc(100% - 150px);
+  left: 75px;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.rock {
+    width: 135px;
+    height: 135px;
+  }
+}
+section.main .game-preview .images .card.rock:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.rock {
+    top: calc(100% - 135px);
+  }
+}
+section.main .game-preview .images .card.scissors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 87%);
+  width: 150px;
+  height: 150px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 15px solid hsl(40deg, 84%, 53%);
+  box-shadow: inset 0px 6px hsl(228deg, 23%, 78%), 0 6px hsl(28deg, 75%, 45%);
+  top: -50px;
+  left: calc(100% - 150px + 25px);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.scissors {
+    width: 135px;
+    height: 135px;
+  }
+}
+section.main .game-preview .images .card.scissors:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.scissors {
+    left: calc(100% - 135px + 25px);
+  }
+}
+section.main .game-preview .images .card.clicked {
+  pointer-events: none;
+  transform: scale(1.5);
+  top: 50px;
+  left: -150px;
+  right: unset;
+}
+section.main .game-preview .images .card.clicked::before {
+  content: "You Picked";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: -50%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.clicked::before {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 850px) {
+  section.main .game-preview .images .card.clicked::before {
+    font-size: 1rem;
+  }
+}
+section.main .game-preview .images .card.clicked:hover {
+  transform: scale(1.5);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.clicked:hover {
+    transform: scale(1.2);
+  }
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.clicked {
+    transform: scale(1.2);
+  }
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.clicked {
+    top: -25px;
+    left: -25px;
+  }
+}
+section.main .game-preview .images .card.house {
+  pointer-events: none;
+  pointer-events: none;
+  transform: scale(1.5);
+  top: 50px;
+  left: unset;
+  right: -150px;
+}
+section.main .game-preview .images .card.house::before {
+  content: "The house picked";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: -50%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.house::before {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 850px) {
+  section.main .game-preview .images .card.house::before {
+    font-size: 1rem;
+  }
+}
+section.main .game-preview .images .card.house:hover {
+  transform: scale(1.5);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.house:hover {
+    transform: scale(1.2);
+  }
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.house {
+    transform: scale(1.2);
+  }
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.house {
+    top: -25px;
+    right: -25px;
+  }
+}
+section.main .game-preview .images .card.house.hidden {
+  border-color: transparent;
+  box-shadow: none;
+  background-color: hsl(224deg, 46%, 17%);
+}
+section.main .game-preview .images .card.house.hidden img {
+  opacity: 0;
+}
+section.main .game-preview .images .card.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+section.main .game-preview .images .card.win {
+  box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0.03), 0px 0px 0px 60px rgba(255, 255, 255, 0.03), 0px 0px 0px 90px rgba(255, 255, 255, 0.03);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .card.win {
+    box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, 0.03), 0px 0px 0px 40px rgba(255, 255, 255, 0.03), 0px 0px 0px 60px rgba(255, 255, 255, 0.03);
+    z-index: -1;
+  }
+}
+@media (min-width: 767px) {
+  section.main .game-preview .images .play-again:not(.hide) ~ .card.clicked {
+    left: -175px;
+  }
+  section.main .game-preview .images .play-again:not(.hide) ~ .card.house {
+    right: -175px;
+  }
+}
+@media (min-width: 880px) {
+  section.main .game-preview .images .play-again:not(.hide) ~ .card.clicked {
+    left: -215px;
+  }
+  section.main .game-preview .images .play-again:not(.hide) ~ .card.house {
+    right: -215px;
+  }
+}/*# sourceMappingURL=main.css.map */
