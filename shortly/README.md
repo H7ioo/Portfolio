@@ -43,5 +43,8 @@ There is a big mess because of Bootstrap, I should have been implement them on m
 
 ## Author
 
-- Website - [Omar Jano](https://7ioo.site)
+- Website - [Omar Jano](https://www.7ioo.site.com)
 - Frontend Mentor - [@H7ioo](https://www.frontendmentor.io/profile/H7ioo)
+- Twitter - [@omar_7ioo](https://twitter.com/omar_7ioo)
+- Instagram - [@omar_7ioo](https://www.instagram.com/omar_7ioo/)
+- Linkedin - [@omar-7ioo](https://www.linkedin.com/in/omar-7ioo/)
