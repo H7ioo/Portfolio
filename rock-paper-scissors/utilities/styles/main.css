@@ -240,7 +240,7 @@ section.main .game-preview .images .play-again {
 }
 @media (max-width: 768px) {
   section.main .game-preview .images .play-again {
-    top: 100%;
+    top: 95%;
   }
 }
 section.main .game-preview .images .play-again h1 {
