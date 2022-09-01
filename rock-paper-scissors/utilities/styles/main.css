@@ -57,10 +57,9 @@ section.main {
 }
 section.main .overlay {
   position: fixed;
-  top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vh;
+  height: 100%;
+  width: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -91,24 +90,9 @@ section.main .rules:hover, section.main .reset:hover {
   background-color: white;
   color: hsl(229deg, 25%, 31%);
 }
-@media (max-width: 768px) {
-  section.main .rules, section.main .reset {
-    right: 50%;
-    bottom: 100px;
-    transform: translateX(50%);
-  }
-}
 section.main .reset {
   left: 30px;
   right: auto;
-}
-@media (max-width: 768px) {
-  section.main .reset {
-    left: 50%;
-    right: auto;
-    bottom: 50px;
-    transform: translateX(-50%);
-  }
 }
 section.main .rules-menu {
   opacity: 0;
@@ -143,7 +127,6 @@ section.main .rules-menu > div h1 {
   section.main .rules-menu > div h1 {
     margin: 0 auto;
     position: relative;
-    margin-top: 100px;
   }
 }
 section.main .rules-menu > div span {
@@ -153,8 +136,8 @@ section.main .rules-menu > div span {
   section.main .rules-menu > div span {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: 150px;
+    transform: translate(-50%, -50%);
+    top: 90%;
   }
   section.main .rules-menu > div span img {
     width: 30px;
@@ -206,6 +189,12 @@ section.main .score .box {
   text-align: center;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  section.main .score .box {
+    width: 150px;
+    padding: 10px;
+  }
+}
 section.main .score .box p {
   text-transform: uppercase;
   color: hsl(229deg, 64%, 46%);
@@ -215,6 +204,11 @@ section.main .score .box .score-counter {
   font-size: 3.5rem;
   color: hsl(229deg, 25%, 31%);
 }
+@media (max-width: 768px) {
+  section.main .score .box .score-counter {
+    font-size: 3rem;
+  }
+}
 section.main .game-preview {
   margin: 0 auto;
 }
@@ -223,6 +217,11 @@ section.main .game-preview .images {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images {
+    top: 62.5%;
+  }
 }
 section.main .game-preview .images .play-again {
   position: absolute;
@@ -240,12 +239,17 @@ section.main .game-preview .images .play-again {
 }
 @media (max-width: 768px) {
   section.main .game-preview .images .play-again {
-    top: 95%;
+    top: 80%;
   }
 }
 section.main .game-preview .images .play-again h1 {
   font-size: 3.5rem;
   text-align: center;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .play-again h1 {
+    font-size: 3rem;
+  }
 }
 section.main .game-preview .images .play-again p {
   color: hsl(229deg, 25%, 31%);
@@ -257,6 +261,11 @@ section.main .game-preview .images .play-again p {
   transition: 0.3s;
   font-size: 1.25rem;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  section.main .game-preview .images .play-again p {
+    font-size: 1rem;
+  }
 }
 section.main .game-preview .images .play-again p:hover {
   color: hsl(349deg, 70%, 56%);
