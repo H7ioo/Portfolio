@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./utilities/images/padlock.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="./utilities/styles/normalize.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./utilities/styles/all.min.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./utilities/styles/main.css" />
+    <!-- Font Awesome JS -->
+    <script src="./utilities/scripts/all.min.js" defer></script>
+    <!-- Main Script -->
+    <script src="./utilities/scripts/main.js" defer></script>
+    <title>PassGen</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="full-box-container d-flex flex-column">
+          <h3 class="text-center">Password Generator</h3>
+          <div
+            class="password d-flex justify-content-center align-items-center mg-auto"
+          >
+            <input
+              class="generated-password"
+              type="text"
+              placeholder="P4$5W0rD!"
+              readonly
+            />
+            <button class="copy">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+          <div class="settings d-flex flex-column">
+            <div
+              class="character d-flex justify-content-between align-items-center"
+            >
+              <p>Character Length</p>
+              <span class="password-length">10</span>
+            </div>
+            <form class="d-flex flex-column" action="#">
+              <input
+                class="range-slider"
+                type="range"
+                min="1"
+                max="20"
+                value="10"
+              />
+              <div class="checkboxes d-flex flex-column">
+                <div class="checkbox checked">
+                  <input type="checkbox" id="lowercaseLetters" checked />
+                  <label for="lowercaseLetters"
+                    >Include Lowercase Letters</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="uppercaseLetters" />
+                  <label for="uppercaseLetters"
+                    >Include Uppercase Letters</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="numbers" />
+                  <label for="numbers">Include Numbers</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="symbols" />
+                  <label for="symbols">Include Symbols</label>
+                </div>
+              </div>
+              <div
+                class="strength-container d-flex justify-content-between align-items-center"
+              >
+                <p>STRENGTH</p>
+                <div class="strength d-flex">
+                  <p>Weak</p>
+                  <!-- Weak, Medium, Strong, Very Strong -->
+                  <div class="bars d-flex align-items-center weak">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <input class="generate" type="submit" value="Generate &#xf061;" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <credit>
+      <!-- Color Depending On Site -->
+      <p style="color: white; text-align: center; margin: 0; padding: 10px">
+        Made By
+        <a
+          style="color: white; text-decoration: underline"
+          href="https://linktr.ee/omar_7ioo"
+          target="_blank"
+          >Omar Jano</a
+        >
+      </p>
+    </credit>
+  </body>
+</html>

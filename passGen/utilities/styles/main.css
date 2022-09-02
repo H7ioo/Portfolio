@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: linear-gradient(to bottom, hsl(248deg, 17%, 9%), hsl(252deg, 26%, 4%));
+  min-height: 100vh;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mg-auto {
+  margin: 0 auto;
+}
+
+main.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+main.main .container .full-box-container {
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+main.main .container .full-box-container h3 {
+  color: hsl(250deg, 5%, 47%);
+}
+main.main .container .full-box-container .password {
+  background-color: hsl(248deg, 10%, 15%);
+  width: 100%;
+}
+main.main .container .full-box-container .password input {
+  background-color: transparent;
+  padding: 20px;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: white;
+  caret-color: hsl(127deg, 100%, 82%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main.main .container .full-box-container .password .copy {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  color: hsl(127deg, 100%, 82%);
+  transition: 0.3s;
+  cursor: pointer;
+  margin-right: 15px;
+}
+main.main .container .full-box-container .password .copy:hover {
+  color: white;
+}
+main.main .container .full-box-container .password .copy svg {
+  font-size: 1.25rem;
+}
+main.main .container .full-box-container .settings {
+  gap: 1.5rem;
+  padding: 20px;
+  background-color: hsl(248deg, 10%, 15%);
+}
+main.main .container .full-box-container .settings .character .password-length {
+  font-size: 1.5rem;
+  color: hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form {
+  gap: 1.5rem;
+}
+main.main .container .full-box-container .settings form input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  background: linear-gradient(to right, hsl(127deg, 100%, 82%) 0%, hsl(127deg, 100%, 82%) 50%, hsl(248deg, 15%, 11%) 50%, hsl(248deg, 15%, 11%) 100%);
+  height: 8px;
+  border-radius: 15px;
+  accent-color: hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=range]:focus-visible::-webkit-slider-thumb {
+  background: hsl(248deg, 15%, 11%);
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=range]:focus-visible::-ms-thumb {
+  background: hsl(248deg, 15%, 11%);
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=range]:focus-visible::-moz-range-thumb {
+  background: hsl(248deg, 15%, 11%);
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form input[type=range]::-webkit-slider-thumb:active {
+  background: hsl(248deg, 15%, 11%);
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form input[type=range]::-moz-range-thumb:active {
+  background: hsl(248deg, 15%, 11%);
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=range]::-ms-thumb {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form input[type=range]::-ms-thumb:active {
+  background: hsl(248deg, 15%, 11%);
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form .checkboxes {
+  gap: 1.5rem;
+}
+main.main .container .full-box-container .settings form .checkboxes .checkbox.disable {
+  pointer-events: none;
+}
+main.main .container .full-box-container .settings form .checkboxes .checkbox input[type=checkbox] {
+  accent-color: hsl(127deg, 100%, 82%);
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  left: -9999px;
+}
+main.main .container .full-box-container .settings form .checkboxes .checkbox input[type=checkbox] + label {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form .checkboxes .checkbox input[type=checkbox] + label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form .checkboxes .checkbox input[type=checkbox]:checked + label::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 14px;
+  font-weight: 900;
+  color: hsl(248deg, 15%, 11%);
+  background-color: hsl(127deg, 100%, 82%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: transparent;
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form .checkboxes .checkbox input[type=checkbox]:focus-visible + label::before,
+main.main .container .full-box-container .settings form .checkboxes .checkbox input[type=checkbox]:hover + label::before {
+  border-color: hsl(127deg, 100%, 82%);
+  transition: 0.3s;
+}
+main.main .container .full-box-container .settings form .strength-container {
+  padding: 20px;
+  background-color: hsl(248deg, 15%, 11%);
+}
+main.main .container .full-box-container .settings form .strength-container > p {
+  color: hsl(250deg, 5%, 47%);
+}
+main.main .container .full-box-container .settings form .strength-container .strength {
+  gap: 0.5rem;
+}
+main.main .container .full-box-container .settings form .strength-container .strength > p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+}
+main.main .container .full-box-container .settings form .strength-container .strength .bars {
+  gap: 0.5rem;
+}
+main.main .container .full-box-container .settings form .strength-container .strength .bars.weak span.active {
+  background-color: hsl(11deg, 90%, 61%);
+  border-color: hsl(11deg, 90%, 61%);
+}
+main.main .container .full-box-container .settings form .strength-container .strength .bars.medium span.active {
+  background-color: hsl(43deg, 84%, 69%);
+  border-color: hsl(43deg, 84%, 69%);
+}
+main.main .container .full-box-container .settings form .strength-container .strength .bars.strong span.active {
+  background-color: hsl(127deg, 100%, 82%);
+  border-color: hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form .strength-container .strength .bars.very-strong span.active {
+  background-color: hsl(127deg, 100%, 82%);
+  border-color: hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form .strength-container .strength .bars span {
+  border: 1px solid white;
+  display: inline-block;
+  width: 8px;
+  height: calc(100% + 5px);
+}
+main.main .container .full-box-container .settings form input[type=submit] {
+  padding: 20px;
+  border: none;
+  background-color: hsl(127deg, 100%, 82%);
+  color: hsl(248deg, 15%, 11%);
+  font-weight: 700;
+  font-family: "Space Mono", FontAwesome;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid hsl(127deg, 100%, 82%);
+}
+main.main .container .full-box-container .settings form input[type=submit]:hover {
+  background-color: transparent;
+  color: hsl(127deg, 100%, 82%);
+}/*# sourceMappingURL=main.css.map */

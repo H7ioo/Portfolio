@@ -1,0 +1,349 @@
+// - Variables
+$backgroundFrom: hsl(248, 17%, 9%);
+$backgroundTo: hsl(252, 26%, 4%);
+$mainColor: hsl(127, 100%, 82%);
+$barWeak: hsl(11, 90%, 61%);
+$barMedium: hsl(43, 84%, 69%);
+$barStrong: hsl(127, 100%, 82%);
+
+$grayText: hsl(250, 5%, 47%);
+$blackColor: hsl(248, 15%, 11%);
+$formBackground: hsl(248, 10%, 15%);
+
+$fastTransition: 0.3s;
+$slowTransition: 0.5s;
+$gap-1: 2rem;
+$gap-2: 1.75rem;
+$gap-3: 1.5rem;
+$gap-4: 1.25rem;
+$gap-5: 1rem;
+$gap-6: 0.75rem;
+$gap-7: 0.5rem;
+
+// - Main Rules
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  // - Weights: 400, 700
+  font-family: "Space Mono", monospace;
+  background: linear-gradient(to bottom, $backgroundFrom, $backgroundTo);
+  min-height: 100vh;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+ol {
+  list-style-position: inside;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+// - Container
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+// - Classes
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.text-center {
+  text-align: center;
+}
+.mg-auto {
+  margin: 0 auto;
+}
+// # Main
+main.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  .container {
+    .full-box-container {
+      gap: $gap-3;
+      max-width: 500px;
+      margin: 0 auto;
+      h3 {
+        color: $grayText;
+      }
+      .password {
+        background-color: $formBackground;
+        width: 100%;
+        input {
+          background-color: transparent;
+          padding: 20px;
+          outline: none;
+          border: none;
+          width: 100%;
+          color: white;
+          caret-color: $mainColor;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+        .copy {
+          border: none;
+          background-color: transparent;
+          padding: 5px;
+          color: $mainColor;
+          transition: $fastTransition;
+          cursor: pointer;
+          margin-right: calc(20px - 5px);
+          &:hover {
+            color: white;
+          }
+          svg {
+            font-size: 1.25rem;
+          }
+        }
+      }
+      .settings {
+        gap: $gap-3;
+        padding: 20px;
+        background-color: $formBackground;
+        .character {
+          .password-length {
+            font-size: 1.5rem;
+            color: $mainColor;
+          }
+        }
+        form {
+          gap: $gap-3;
+          input[type="range"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 100%;
+            // background: $blackColor;
+            background: linear-gradient(
+              to right,
+              $mainColor 0%,
+              $mainColor 50%,
+              $blackColor 50%,
+              $blackColor 100%
+            );
+
+            height: 8px;
+            border-radius: 15px;
+            accent-color: $mainColor;
+            &:focus-visible {
+              &::-webkit-slider-thumb {
+                background: $blackColor;
+                border: 2px solid $mainColor;
+              }
+              &::-ms-thumb {
+                background: $blackColor;
+                border: 2px solid $mainColor;
+              }
+              &::-moz-range-thumb {
+                background: $blackColor;
+                border: 2px solid $mainColor;
+              }
+            }
+          }
+          @mixin rangeThumb {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            transition: $fastTransition;
+            &:active {
+              background: $blackColor;
+              border: 2px solid $mainColor;
+            }
+          }
+          // ! FIX JS, increse max but devide in JS
+          input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            @include rangeThumb;
+          }
+          input[type="range"]::-moz-range-thumb {
+            -moz-appearance: none;
+            @include rangeThumb;
+          }
+          input[type="range"]::-ms-thumb {
+            @include rangeThumb;
+          }
+          // input[type="range"]::-moz-range-progress {
+          //   -moz-appearance: none;
+          //   background-color: $mainColor;
+          // }
+          // input[type="range"]::-moz-range-track {
+          //   -moz-appearance: none;
+          //   background-color: $blackColor;
+          // }
+          // input[type="range"]::-ms-fill-lower {
+          //   background-color: $mainColor;
+          // }
+          // input[type="range"]::-ms-fill-upper {
+          //   background-color: $blackColor;
+          // }
+          .checkboxes {
+            gap: $gap-3;
+            .checkbox {
+              &.disable {
+                pointer-events: none;
+              }
+              input[type="checkbox"] {
+                accent-color: $mainColor;
+                opacity: 0;
+                position: absolute;
+                cursor: pointer;
+                left: -9999px;
+              }
+              input[type="checkbox"] + label {
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                transition: $fastTransition;
+              }
+              input[type="checkbox"] + label::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border: 2px solid white;
+                margin-right: 15px;
+                transition: $fastTransition;
+              }
+              input[type="checkbox"]:checked + label::before {
+                content: "\f00c";
+                font-family: FontAwesome;
+                font-size: 14px;
+                font-weight: 900;
+                color: $blackColor;
+                background-color: $mainColor;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-color: transparent;
+                transition: $fastTransition;
+              }
+              input[type="checkbox"]:focus-visible + label::before,
+              input[type="checkbox"]:hover + label::before {
+                border-color: $mainColor;
+                transition: $fastTransition;
+              }
+            }
+          }
+          .strength-container {
+            padding: 20px;
+            background-color: $blackColor;
+            > p {
+              color: $grayText;
+            }
+            .strength {
+              gap: $gap-7;
+              > p {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 1.25rem;
+              }
+              .bars {
+                gap: $gap-7;
+                &.weak {
+                  span {
+                    &.active {
+                      background-color: $barWeak;
+                      border-color: $barWeak;
+                    }
+                  }
+                }
+                &.medium {
+                  span {
+                    &.active {
+                      background-color: $barMedium;
+                      border-color: $barMedium;
+                    }
+                  }
+                }
+                &.strong {
+                  span {
+                    &.active {
+                      background-color: $barStrong;
+                      border-color: $barStrong;
+                    }
+                  }
+                }
+                &.very-strong {
+                  span {
+                    &.active {
+                      background-color: $barStrong;
+                      border-color: $barStrong;
+                    }
+                  }
+                }
+                span {
+                  border: 1px solid white;
+                  display: inline-block;
+                  width: 8px;
+                  height: calc(100% + 5px);
+                  // &.active {
+                  //   background-color: $barWeak;
+                  //   border-color: $barWeak;
+                  // }
+                }
+              }
+            }
+          }
+          input[type="submit"] {
+            padding: 20px;
+            border: none;
+            background-color: $mainColor;
+            color: $blackColor;
+            font-weight: 700;
+            font-family: "Space Mono", FontAwesome;
+            cursor: pointer;
+            transition: $fastTransition;
+            border: 2px solid $mainColor;
+            &:hover {
+              background-color: transparent;
+              color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

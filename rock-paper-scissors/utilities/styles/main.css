@@ -52,10 +52,10 @@ ul {
     width: 1170px;
   }
 }
-section.main {
+main.main {
   min-height: 100vh;
 }
-section.main .overlay {
+main.main .overlay {
   position: fixed;
   left: 0;
   height: 100%;
@@ -66,11 +66,11 @@ section.main .overlay {
   transition: 0.3s;
   pointer-events: none;
 }
-section.main .overlay.open {
+main.main .overlay.open {
   pointer-events: all;
   opacity: 1;
 }
-section.main .rules, section.main .reset {
+main.main .rules, main.main .reset {
   position: fixed;
   right: 30px;
   bottom: 30px;
@@ -86,15 +86,15 @@ section.main .rules, section.main .reset {
   transition: 0.3s;
   cursor: pointer;
 }
-section.main .rules:hover, section.main .reset:hover {
+main.main .rules:hover, main.main .reset:hover {
   background-color: white;
   color: hsl(229deg, 25%, 31%);
 }
-section.main .reset {
+main.main .reset {
   left: 30px;
   right: auto;
 }
-section.main .rules-menu {
+main.main .rules-menu {
   opacity: 0;
   position: fixed;
   top: 50%;
@@ -107,55 +107,55 @@ section.main .rules-menu {
   pointer-events: none;
 }
 @media (max-width: 768px) {
-  section.main .rules-menu {
+  main.main .rules-menu {
     width: 100%;
     height: 100%;
   }
 }
-section.main .rules-menu > div {
+main.main .rules-menu > div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-section.main .rules-menu > div h1 {
+main.main .rules-menu > div h1 {
   margin: 0;
   color: hsl(229deg, 25%, 31%);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  section.main .rules-menu > div h1 {
+  main.main .rules-menu > div h1 {
     margin: 0 auto;
     position: relative;
   }
 }
-section.main .rules-menu > div span {
+main.main .rules-menu > div span {
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  section.main .rules-menu > div span {
+  main.main .rules-menu > div span {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     top: 90%;
   }
-  section.main .rules-menu > div span img {
+  main.main .rules-menu > div span img {
     width: 30px;
   }
 }
 @media (max-width: 768px) {
-  section.main .rules-menu > img {
+  main.main .rules-menu > img {
     width: 100%;
     position: relative;
     top: 35%;
     transform: translateY(-50%);
   }
 }
-section.main .rules-menu.open {
+main.main .rules-menu.open {
   opacity: 1;
   pointer-events: all;
 }
-section.main .score {
+main.main .score {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -167,18 +167,18 @@ section.main .score {
   border: 3px solid hsl(217deg, 16%, 45%);
   border-radius: 15px;
 }
-section.main .score .image {
+main.main .score .image {
   width: 100%;
 }
-section.main .score .image img {
+main.main .score .image img {
   max-width: 100%;
 }
 @media (max-width: 768px) {
-  section.main .score .image img {
+  main.main .score .image img {
     max-width: 75%;
   }
 }
-section.main .score .box {
+main.main .score .box {
   background-color: hsl(0deg, 0%, 99%);
   width: 200px;
   height: -webkit-fit-content;
@@ -190,40 +190,40 @@ section.main .score .box {
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  section.main .score .box {
+  main.main .score .box {
     width: 150px;
     padding: 10px;
   }
 }
-section.main .score .box p {
+main.main .score .box p {
   text-transform: uppercase;
   color: hsl(229deg, 64%, 46%);
   letter-spacing: 2px;
 }
-section.main .score .box .score-counter {
+main.main .score .box .score-counter {
   font-size: 3.5rem;
   color: hsl(229deg, 25%, 31%);
 }
 @media (max-width: 768px) {
-  section.main .score .box .score-counter {
+  main.main .score .box .score-counter {
     font-size: 3rem;
   }
 }
-section.main .game-preview {
+main.main .game-preview {
   margin: 0 auto;
 }
-section.main .game-preview .images {
+main.main .game-preview .images {
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images {
+  main.main .game-preview .images {
     top: 62.5%;
   }
 }
-section.main .game-preview .images .play-again {
+main.main .game-preview .images .play-again {
   position: absolute;
   top: 35%;
   transition: 0.3s;
@@ -238,20 +238,20 @@ section.main .game-preview .images .play-again {
   width: max-content;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .play-again {
+  main.main .game-preview .images .play-again {
     top: 80%;
   }
 }
-section.main .game-preview .images .play-again h1 {
+main.main .game-preview .images .play-again h1 {
   font-size: 3.5rem;
   text-align: center;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .play-again h1 {
+  main.main .game-preview .images .play-again h1 {
     font-size: 3rem;
   }
 }
-section.main .game-preview .images .play-again p {
+main.main .game-preview .images .play-again p {
   color: hsl(229deg, 25%, 31%);
   font-weight: 700;
   text-align: center;
@@ -263,31 +263,31 @@ section.main .game-preview .images .play-again p {
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .play-again p {
+  main.main .game-preview .images .play-again p {
     font-size: 1rem;
   }
 }
-section.main .game-preview .images .play-again p:hover {
+main.main .game-preview .images .play-again p:hover {
   color: hsl(349deg, 70%, 56%);
 }
-section.main .game-preview .images .play-again.hide {
+main.main .game-preview .images .play-again.hide {
   opacity: 0;
   pointer-events: none;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .triangle {
+  main.main .game-preview .images .triangle {
     width: 280px;
   }
 }
-section.main .game-preview .images .triangle.hide {
+main.main .game-preview .images .triangle.hide {
   opacity: 0;
   pointer-events: none;
 }
-section.main .game-preview .images .card {
+main.main .game-preview .images .card {
   position: absolute;
   transition: 0.5s;
 }
-section.main .game-preview .images .card.paper {
+main.main .game-preview .images .card.paper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,15 +303,15 @@ section.main .game-preview .images .card.paper {
   left: -25px;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.paper {
+  main.main .game-preview .images .card.paper {
     width: 135px;
     height: 135px;
   }
 }
-section.main .game-preview .images .card.paper:hover {
+main.main .game-preview .images .card.paper:hover {
   transform: scale(1.1);
 }
-section.main .game-preview .images .card.rock {
+main.main .game-preview .images .card.rock {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,20 +327,20 @@ section.main .game-preview .images .card.rock {
   left: 75px;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.rock {
+  main.main .game-preview .images .card.rock {
     width: 135px;
     height: 135px;
   }
 }
-section.main .game-preview .images .card.rock:hover {
+main.main .game-preview .images .card.rock:hover {
   transform: scale(1.1);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.rock {
+  main.main .game-preview .images .card.rock {
     top: calc(100% - 135px);
   }
 }
-section.main .game-preview .images .card.scissors {
+main.main .game-preview .images .card.scissors {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,27 +356,27 @@ section.main .game-preview .images .card.scissors {
   left: calc(100% - 150px + 25px);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.scissors {
+  main.main .game-preview .images .card.scissors {
     width: 135px;
     height: 135px;
   }
 }
-section.main .game-preview .images .card.scissors:hover {
+main.main .game-preview .images .card.scissors:hover {
   transform: scale(1.1);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.scissors {
+  main.main .game-preview .images .card.scissors {
     left: calc(100% - 135px + 25px);
   }
 }
-section.main .game-preview .images .card.clicked {
+main.main .game-preview .images .card.clicked {
   pointer-events: none;
   transform: scale(1.5);
   top: 50px;
   left: -150px;
   right: unset;
 }
-section.main .game-preview .images .card.clicked::before {
+main.main .game-preview .images .card.clicked::before {
   content: "You Picked";
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -390,35 +390,35 @@ section.main .game-preview .images .card.clicked::before {
   letter-spacing: 2px;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.clicked::before {
+  main.main .game-preview .images .card.clicked::before {
     font-size: 0.9rem;
   }
 }
 @media (min-width: 767px) and (max-width: 850px) {
-  section.main .game-preview .images .card.clicked::before {
+  main.main .game-preview .images .card.clicked::before {
     font-size: 1rem;
   }
 }
-section.main .game-preview .images .card.clicked:hover {
+main.main .game-preview .images .card.clicked:hover {
   transform: scale(1.5);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.clicked:hover {
+  main.main .game-preview .images .card.clicked:hover {
     transform: scale(1.2);
   }
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.clicked {
+  main.main .game-preview .images .card.clicked {
     transform: scale(1.2);
   }
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.clicked {
+  main.main .game-preview .images .card.clicked {
     top: -25px;
     left: -25px;
   }
 }
-section.main .game-preview .images .card.house {
+main.main .game-preview .images .card.house {
   pointer-events: none;
   pointer-events: none;
   transform: scale(1.5);
@@ -426,7 +426,7 @@ section.main .game-preview .images .card.house {
   left: unset;
   right: -150px;
 }
-section.main .game-preview .images .card.house::before {
+main.main .game-preview .images .card.house::before {
   content: "The house picked";
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -440,68 +440,68 @@ section.main .game-preview .images .card.house::before {
   letter-spacing: 2px;
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.house::before {
+  main.main .game-preview .images .card.house::before {
     font-size: 0.9rem;
   }
 }
 @media (min-width: 767px) and (max-width: 850px) {
-  section.main .game-preview .images .card.house::before {
+  main.main .game-preview .images .card.house::before {
     font-size: 1rem;
   }
 }
-section.main .game-preview .images .card.house:hover {
+main.main .game-preview .images .card.house:hover {
   transform: scale(1.5);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.house:hover {
+  main.main .game-preview .images .card.house:hover {
     transform: scale(1.2);
   }
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.house {
+  main.main .game-preview .images .card.house {
     transform: scale(1.2);
   }
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.house {
+  main.main .game-preview .images .card.house {
     top: -25px;
     right: -25px;
   }
 }
-section.main .game-preview .images .card.house.hidden {
+main.main .game-preview .images .card.house.hidden {
   border-color: transparent;
   box-shadow: none;
   background-color: hsl(224deg, 46%, 17%);
 }
-section.main .game-preview .images .card.house.hidden img {
+main.main .game-preview .images .card.house.hidden img {
   opacity: 0;
 }
-section.main .game-preview .images .card.hide {
+main.main .game-preview .images .card.hide {
   opacity: 0;
   pointer-events: none;
 }
-section.main .game-preview .images .card.win {
+main.main .game-preview .images .card.win {
   box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0.03), 0px 0px 0px 60px rgba(255, 255, 255, 0.03), 0px 0px 0px 90px rgba(255, 255, 255, 0.03);
 }
 @media (max-width: 768px) {
-  section.main .game-preview .images .card.win {
+  main.main .game-preview .images .card.win {
     box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, 0.03), 0px 0px 0px 40px rgba(255, 255, 255, 0.03), 0px 0px 0px 60px rgba(255, 255, 255, 0.03);
     z-index: -1;
   }
 }
 @media (min-width: 767px) {
-  section.main .game-preview .images .play-again:not(.hide) ~ .card.clicked {
+  main.main .game-preview .images .play-again:not(.hide) ~ .card.clicked {
     left: -175px;
   }
-  section.main .game-preview .images .play-again:not(.hide) ~ .card.house {
+  main.main .game-preview .images .play-again:not(.hide) ~ .card.house {
     right: -175px;
   }
 }
 @media (min-width: 880px) {
-  section.main .game-preview .images .play-again:not(.hide) ~ .card.clicked {
+  main.main .game-preview .images .play-again:not(.hide) ~ .card.clicked {
     left: -215px;
   }
-  section.main .game-preview .images .play-again:not(.hide) ~ .card.house {
+  main.main .game-preview .images .play-again:not(.hide) ~ .card.house {
     right: -215px;
   }
 }/*# sourceMappingURL=main.css.map */
