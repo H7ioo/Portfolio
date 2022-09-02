@@ -1,6 +1,6 @@
-# PROJECT_NAME
+# PassGen
 
-????ABOUT????
+Password generator with options.
 
 ## Table of contents
 
