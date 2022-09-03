@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./main.js" defer></script>
+        <title>Task Manger</title>
+        <style>
+            .container {
+                padding: 0 10px;
+                background-color: white;
+            }
+            .container .form {
+                width: auto;
+                background-color: #ccc;
+                padding: 25px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+            .form input[type="text"] {
+                border: none;
+                outline: none;
+                padding: 10px;
+                border-radius: 5px;
+                flex: 1;
+                margin-right: 10px;
+            }
+            .form input[type="submit"] {
+                color: white;
+                background-color: rgb(248, 88, 88);
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .container .tasks {
+                background-color: #ccc;
+                padding: 25px;
+            }
+            .tasks .task {
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .tasks .task h3 {
+                margin: 0;
+            }
+            .tasks .task button {
+                background-color: rgb(236, 55, 55);
+                border: none;
+                border-radius: 5px;
+                font-size: 12px;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <input type="text" class="input" placeholder="Task Name" />
+                <input type="submit" value="Add Task" class="add" />
+            </div>
+            <div class="tasks"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,221 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #3729B1;
+    --text-hover-color: #4D40B9;
+    --secondary-color: #0FD699;
+    --opacity-text-color: #B8B8B8;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    /* padding: 50px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Contact Us */
+.contact-us {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.contact-us .container {
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.35);
+    display: flex;
+}
+.contact-us .container::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: -60px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+.contact-us .header {
+    background-color: var(--main-color);
+    padding: 40px;
+    color: white;
+}
+.contact-us .header .nav {
+    margin-bottom: 200px;
+}
+.contact-us .header .nav i {
+    padding: 8px 8px 0;
+    background-color: white;
+    border-radius: 50%;
+    color: var(--main-color);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.contact-us .header .nav i::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 18px;
+}
+.contact-us .header .nav ul li a {
+    font-weight: 200;
+    display: inline-block;
+    padding: 10px;
+    width: 120px;
+    color: white;
+    border-radius: 10px;
+    transform: translateX(-10px);
+}
+.contact-us .header .nav ul li a:hover {
+    background-color: var(--text-hover-color);
+}
+.contact-us .header .text h2 {
+    font-weight: 600;
+    position: relative;
+    min-width: max-content;
+}
+.contact-us .header .text h2::before {
+    content: "We need more";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    font-size: 12px;
+    color: #f1f1f1;
+    opacity: 0.5;
+}
+.contact-us .header .text p {
+    font-weight: 200;
+    color: #f1f1f1;
+    font-size: 12px;
+    max-width: 450px;
+    margin: 20px 0;
+}
+.contact-us .header .text a {
+    color: white;
+    font-size: 12px;
+}
+.contact-us .header .text a i {
+    margin-left: 5px;
+    
+}
+.contact-us .apply {
+    padding: 40px;
+    position: relative;
+}
+.contact-us .apply::before {
+    content: "\f439";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--secondary-color);
+    font-size: 200px;
+    position: absolute;
+    bottom: -15px;
+    right: 0px;
+}
+.contact-us .apply::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 999999999999999px;
+    width: 999999999999999px;
+    top: -100vh;
+    left: 0;
+    z-index: -1;
+}
+
+.contact-us .apply > h1 {
+    font-weight: 400;
+}
+.contact-us .apply > h2 {
+    color: var(--opacity-text-color);
+    font-weight: 400;
+    max-width: 175px;
+    margin-bottom: 50px;
+}
+.contact-us .apply .contact {
+    display: flex;
+    gap: 40px;
+}
+.contact-us .apply .contact form input[type="text"],
+.contact-us .apply .contact form input[type="email"],
+.contact-us .apply .contact form textarea {
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+.contact-us .apply .contact form textarea {
+    width: 100%;
+    height: 150px;
+}
+.contact-us .apply .contact form > div {
+    margin-left: 20px;
+}
+.contact-us .apply .contact form input[type="submit"] {
+    border: none;
+    background-color: white;
+    color: var(--main-color);
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+.contact-us .apply .contact form > div::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1d8";
+    color: var(--main-color);
+}
+.contact-us .apply .text h2 {
+    min-width: 350px;
+    font-weight: 600;
+}
+.contact-us .apply .text p {
+    font-size: 12px;
+    max-width: 600px;
+    margin: 20px 0;
+}
+.contact-us .apply .text a {
+    display: block;
+    font-size: 12px;
+    color: var(--main-color);
+}
+.contact-us .apply .text a:last-child {
+    margin-top: 10px;
+}
+/* End Contact Us */
