@@ -1,0 +1,1 @@
+Navbar is bad, the column and the flex. The code is not good too, the state have to reset if link is pressed.
