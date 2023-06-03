@@ -137,10 +137,10 @@ async function loadRecipesCards() {
         // Image Container
         let imageContainer = document.createElement("a");
         imageContainer.className = "image";
-        imageContainer.href = `/recipes/${made.hrefFormat(recipe.href)}.html`;
+        imageContainer.href = `./recipes/${made.hrefFormat(recipe.href)}.html`;
         // Image
         let image = document.createElement("img");
-        image.src = `/images/foods/${made.hrefFormat(recipe.href)}.jpg`;
+        image.src = `./images/foods/${made.hrefFormat(recipe.href)}.jpg`;
         image.alt = `Image Of ${recipe.title}`;
         // Append To Image
         imageContainer.append(image);
@@ -163,7 +163,7 @@ async function loadRecipesCards() {
         // Info a
         let recipeLink = document.createElement("a");
         recipeLink.textContent = "Recipe";
-        recipeLink.href = `/recipes/${made.hrefFormat(recipe.href)}.html`;
+        recipeLink.href = `./recipes/${made.hrefFormat(recipe.href)}.html`;
         // Append To Info
         recipeInfo.append(recipeName, recipeIngredient, recipeLink);
         // Append To Card
