@@ -13,7 +13,7 @@ let recipeName = decodeURIComponent(
 importTemplate();
 async function importTemplate() {
     // Fetching Recipes
-    let recipes = await made.getRecipes();
+    let recipes = await made.getRecipes2();
     // If Recipe Title Is Recipe Name Than Pass It
     recipes.forEach((recipe) => {
         if (made.hrefFormat(recipe.href) !== recipeName) return;
