@@ -26,6 +26,13 @@ async function getRecipes() {
             return recipe;
         });
 }
+async function getRecipes2() {
+    return fetch("../foods-en.json")
+        .then((res) => res.json())
+        .then((recipe) => {
+            return recipe;
+        });
+}
 // # End Built Function
 
-export { hrefFormat, getRecipes };
+export { hrefFormat, getRecipes, getRecipes2 };
