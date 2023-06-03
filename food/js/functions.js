@@ -20,7 +20,7 @@ function hrefFormat(str) {
 }
 // let recipes = await getRecipes()
 async function getRecipes() {
-    return fetch("../foods-en.json")
+    return fetch("./foods-en.json")
         .then((res) => res.json())
         .then((recipe) => {
             return recipe;
