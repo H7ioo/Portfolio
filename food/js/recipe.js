@@ -37,7 +37,7 @@ function recipeNameAndImage() {
     let recipeImage = templateCopy.querySelector(
         ".recipe-info .text .image-container img"
     );
-    recipeImage.src = `./images/foods/${recipeName}.jpg`;
+    recipeImage.src = `../images/foods/${recipeName}.jpg`;
     recipeImage.alt = `Image Of ${thisRecipe.title}`;
 }
 function recipeIngredientsCheckboxes() {
